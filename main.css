@@ -1,4 +1,12 @@
-
+.breadcrumb {
+    margin: 20px 0;
+}
 .footer {
     background: #eee;
 }
+
+.card-deck {
+    margin-bottom: 15px;
+}
+
+
