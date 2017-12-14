@@ -1,12 +1,134 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+body {
+    margin-bottom: 60px;
+    background: #eee;
+}
+.top-header {
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+.top-header a {
+    color: #fff;
+}
+.top-header .fa {
+    margin: 0 5px 0 20px ;
+}
+.header-block-cart {
+    margin-left: 50px;
+    margin-right: 15px;
+}
+.header-block-cart .fa {
+    font-size: 20px;
+    margin-right: 3px;
+}
+.header-block-cart span {
+    margin-left: 3px;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand {
+    color: Tomato;
+    font-size: 30px;
+    font-weight: 600;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: Tomato;
+}
+header nav {
+    background: #fff;
+}
 .breadcrumb {
     margin: 20px 0;
 }
-.footer {
-    background: #eee;
+.breadcrumb {
+    background: #eee;   
+}
+
+.sidebar {
+    padding: 0 10px;
+}
+.sidebar li:hover {
+    background: #fff;
+    border-radius: 5px;
+}
+.sidebar .nav a{
+    padding-left: 0;
+}
+.sidebar .nav a:hover{
+    padding-left: 5px;
+    text-decoration: none;
 }
 
 .card-deck {
     margin-bottom: 15px;
 }
+.card-footer button{
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.card-footer .product-price {
+    float: right;
+    margin-top: 5px;
+}
+main {
+    margin-bottom: 50px;
+}
+
+.cart img {
+    width: 70px;
+    height: 40px;
+}
+.table td{
+    vertical-align: middle;
+}
+.table tr i{
+    text-align: center;
+}
+.delete {
+    margin-left: 20px;
+}
+
+.table a {
+    color: Tomato;
+    font-size: 20px;
+}
+.count-price-cart span{
+    color: Tomato;
+    font-weight: 600;
+}
+
+.block-panels-product {
+    margin-top: 30px;
+}
+.block-panels-product form {
+    margin-top: 25px;
+    width: 50%;
+}
+.block-product span {
+    margin-left: 20px;
+}
+
+footer {
+    background: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
 
 
