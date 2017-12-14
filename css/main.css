@@ -6,6 +6,8 @@ body {
     margin-bottom: 60px;
     background: #eee;
 }
+
+
 .top-header {
     padding: 10px;
     color: #fff;
@@ -40,12 +42,17 @@ body {
 header nav {
     background: #fff;
 }
+
+
+
 .breadcrumb {
     margin: 20px 0;
 }
 .breadcrumb {
     background: #eee;   
 }
+
+
 
 .sidebar {
     padding: 0 10px;
@@ -62,6 +69,8 @@ header nav {
     text-decoration: none;
 }
 
+
+
 .card-deck {
     margin-bottom: 15px;
 }
@@ -74,9 +83,12 @@ header nav {
     float: right;
     margin-top: 5px;
 }
+
+
 main {
     margin-bottom: 50px;
 }
+
 
 .cart img {
     width: 70px;
@@ -91,7 +103,6 @@ main {
 .delete {
     margin-left: 20px;
 }
-
 .table a {
     color: Tomato;
     font-size: 20px;
@@ -100,6 +111,8 @@ main {
     color: Tomato;
     font-weight: 600;
 }
+
+
 
 .block-panels-product {
     margin-top: 30px;
@@ -111,6 +124,8 @@ main {
 .block-product span {
     margin-left: 20px;
 }
+
+
 
 footer {
     background: #fff;
