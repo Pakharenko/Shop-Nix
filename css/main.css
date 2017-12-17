@@ -70,9 +70,11 @@ header nav {
 }
 
 
-
-.card-deck {
-    margin-bottom: 15px;
+.card {
+    width: 100%;
+}
+.block-products {
+    margin-bottom: 20px;
 }
 .card-footer button{
     padding: 5px;
