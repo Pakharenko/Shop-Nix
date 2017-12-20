@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
-        <p>Shop-NIX 2017 </p>
-        <p>[ Pro-Web-Master - Pakharenko ]</p>
+        <p>Shop-NIX <?= date('Y'); ?> </p>
+        <p>[ Pro-Web-Master - Pakharenko E. ]</p>
     </div>
 </footer>
 

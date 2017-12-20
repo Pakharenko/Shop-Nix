@@ -43,30 +43,40 @@ header nav {
     background: #fff;
 }
 
-
-
 .breadcrumb {
     margin: 20px 0;
 }
 .breadcrumb {
-    background: #eee;   
+    background: #fff;
 }
 
-
-
 .sidebar {
-    padding: 0 10px;
+    border-right: 2px solid #ccc;
+}
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+
+}
+.sidebar .sidebar-nav {
+    border-bottom: 2px solid #ccc;
+}
+.sidebar li {
+    padding: 5px;
 }
 .sidebar li:hover {
     background: #fff;
-    border-radius: 5px;
+    border-radius: 3px;
 }
-.sidebar .nav a{
-    padding-left: 0;
-}
-.sidebar .nav a:hover{
-    padding-left: 5px;
+.sidebar a {
+    display: block;
     text-decoration: none;
+}
+.submenu li {
+    margin-left: 5px;
+}
+.sidebar h3 {
+    font-size: 3wh;
 }
 
 
@@ -122,6 +132,9 @@ main {
 .block-panels-product form {
     margin-top: 25px;
     width: 50%;
+}
+.block-product {
+    margin-left: 0;
 }
 .block-product span {
     margin-left: 20px;
