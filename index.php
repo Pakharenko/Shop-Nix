@@ -1,5 +1,7 @@
 <?php require_once 'layouts/header.php'; ?>
 <?php require_once 'prod_list.php'; ?>
+<?php require_once 'validate.php'; ?>
+
 
 
     <main>
@@ -17,14 +19,14 @@
 
                         <div class="card-deck">
 
-                            <?php foreach ($products as $key => $product) : ?>
+                            <?php foreach ($products as $product) : ?>
 
                                     <div class="col-md-4 block-products">
                                         <div class="card">
                                             <img class="card-img-top" src="../Shop-Nix/image/l.jpg"
                                                  alt="Card image cap">
                                             <div class="card-body">
-                                                <h4 class="card-title"><?= $product['title']; ?></h4>
+                                                <h4 class="card-title"><a href=""><?= $product['title']; ?></a></h4>
                                                 <p class="card-text"><?= $product['desc']; ?></p>
                                                 <p class="card-text">Count goods: <?= $product['count_goods'];?></p>
                                             </div>

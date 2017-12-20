@@ -6,7 +6,7 @@
         'title' => 'Iphone',
         'desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores doloribus eum fuga incidunt ipsa maiores',
         'price' => '190.55',
-        'count_goods' => 22,
+        'count_goods' => 11,
     ],
     [
         'id' => 1,
