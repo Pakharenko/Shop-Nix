@@ -1,6 +1,6 @@
 <?php require_once 'layouts/header.php'; ?>
 <?php require_once 'prod_list.php'; ?>
-<?php require_once 'count_products.php'; ?>
+
 
     <main>
         <div class="content">
@@ -18,7 +18,6 @@
                         <div class="card-deck">
 
                             <?php foreach ($products as $key => $product) : ?>
-                                <?php foreach ($count_products as $count_prod) : ?>
 
                                     <div class="col-md-4 block-products">
                                         <div class="card">
@@ -27,7 +26,7 @@
                                             <div class="card-body">
                                                 <h4 class="card-title"><?= $product['title']; ?></h4>
                                                 <p class="card-text"><?= $product['desc']; ?></p>
-                                                <p class="card-text">Count products: <?= $count_prod; ?></p>
+                                                <p class="card-text">Count goods: <?= $product['count_goods'];?></p>
                                             </div>
                                             <div class="card-footer">
                                                 <button type="button" class="btn btn-success">Add to cart</button>
@@ -36,7 +35,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                <?php endforeach; ?>
+
                             <?php endforeach; ?>
                         </div>
                         
