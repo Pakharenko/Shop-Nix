@@ -1,0 +1,17 @@
+{
+    "name": "shop/shop",
+    "authors": [
+        {
+            "name": "Pakharenko",
+            "email": "paharenko1985@mail.ru"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "fw\\": "vendor/fw",
+            "app\\": "app"
+        }
+    }
+}
