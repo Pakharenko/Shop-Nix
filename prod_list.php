@@ -1,6 +1,9 @@
 <?php
 
-return $products = [
+
+
+ return $products = [
+
     [
         'id' => 0,
         'title' => 'Iphone',

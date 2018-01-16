@@ -4,6 +4,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <list default="true" id="42c57344-36e4-4faa-92df-810208ef3a01" name="Default" comment="">
@@ -32,9 +35,12 @@
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
     <ignored path=".idea/dataSources.local.xml" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <list default="true" id="fa8a1f86-3006-41ed-9577-8d8df265bb9d" name="Default" comment="" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,6 +52,9 @@
   </component>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
@@ -66,8 +75,11 @@
               <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
   <component name="DatabaseView">
@@ -87,6 +99,9 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
@@ -205,6 +220,7 @@
             <state relative-caret-position="72">
               <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
@@ -214,6 +230,8 @@
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
               <folding />
             </state>
           </provider>
@@ -221,6 +239,9 @@
       </file>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
       <file leaf-file-name="MainController.php" pinned="false" current-in-tab="false">
@@ -236,6 +257,7 @@
               <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
@@ -243,6 +265,8 @@
             <state relative-caret-position="650">
               <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
               <folding />
@@ -269,6 +293,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
         <option value="$PROJECT_DIR$/config/routes.php" />
@@ -319,11 +346,14 @@
         <option value="$PROJECT_DIR$/css/main.css" />
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
       </list>
@@ -338,6 +368,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
   <component name="PhpServers">
@@ -394,6 +427,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -404,6 +438,8 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
   <component name="ProjectView">
@@ -423,10 +459,13 @@
     <panes>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <pane id="Scope" />
       <pane id="Scratches" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
       <pane id="ProjectPane">
@@ -436,6 +475,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
               <option name="myItemId" value="shop.local" />
@@ -653,6 +695,7 @@
               <option name="myItemId" value="css" />
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <option name="myItemId" value="shop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
@@ -660,6 +703,8 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="shop" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
@@ -670,6 +715,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
       <pane id="Scratches" />
@@ -679,8 +727,11 @@
       <pane id="Scratches" />
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     </panes>
@@ -690,6 +741,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -703,8 +757,11 @@
     </key>
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
@@ -724,6 +781,9 @@
     </option>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
@@ -732,6 +792,7 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   </component>
@@ -762,6 +823,8 @@
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -775,12 +838,15 @@
     </configuration>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
       <PhpTestRunnerSettings />
       <method />
     </configuration>
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -795,10 +861,14 @@
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <command value="run-script" />
 =======
       <command value="run" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+      <command value="run-script" />
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
       <command value="run-script" />
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
@@ -807,6 +877,7 @@
       <envs />
       <method />
     </configuration>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -826,6 +897,8 @@
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -833,6 +906,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
   <component name="SvnConfiguration">
@@ -853,8 +929,11 @@
       <workItem from="1515572112022" duration="1734000" />
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
   <component name="TaskManager">
@@ -872,10 +951,15 @@
       <workItem from="1513171515624" duration="3464000" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1513775934358" duration="2360000" />
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
 =======
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+      <workItem from="1513775934358" duration="2360000" />
+>>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
       <workItem from="1513775934358" duration="2360000" />
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
@@ -887,6 +971,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <option name="totallyTimeSpent" value="44069000" />
@@ -905,9 +992,12 @@
 =======
     <option name="totallyTimeSpent" value="8148000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <option name="totallyTimeSpent" value="5788000" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
   </component>
@@ -923,6 +1013,9 @@
   <component name="ToolWindowManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -930,11 +1023,14 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1869829" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <frame x="292" y="52" width="1400" height="1000" extended-state="0" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24642856" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -945,9 +1041,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
 =======
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
@@ -966,6 +1066,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
   <component name="Vcs.Log.UiProperties">
@@ -980,10 +1083,13 @@
     <option name="processedProjectFiles" value="true" />
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
   </component>
@@ -998,6 +1104,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
@@ -1168,6 +1277,7 @@
         <state relative-caret-position="72">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1176,12 +1286,17 @@
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
           <folding />
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
@@ -1196,6 +1311,7 @@
         <state relative-caret-position="-9072">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -1204,12 +1320,17 @@
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
           <folding />
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_namespaces.php">
@@ -1394,6 +1515,7 @@
           <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <entry file="file://$PROJECT_DIR$/index.php" />
     <entry file="file://$PROJECT_DIR$/index.php" />
@@ -1406,6 +1528,8 @@
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
           <folding />
         </state>
       </provider>
@@ -1413,6 +1537,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     <entry file="file://$PROJECT_DIR$/public/index.php">
@@ -1426,12 +1553,15 @@
           <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
 >>>>>>> bce615119ddcaa5a1b6410684c6db92b3f39b25f
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
 >>>>>>> 30db725e3e52b0e1e265e4b450ac3b0f387e10cc
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
           <folding />

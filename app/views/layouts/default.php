@@ -21,7 +21,11 @@
                 <div class="col-md-4">
                     <?php if (\app\models\User::isAuth()) : ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <?= app\models\User::isAuth(); ?>
+=======
+                        <?= \app\models\User::isAuth(); ?>
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
 =======
                         <?= \app\models\User::isAuth(); ?>
 >>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678

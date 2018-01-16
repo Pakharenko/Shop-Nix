@@ -12,10 +12,13 @@ class UserController extends AppController
             $_SESSION['email'] = $_POST['email'];
             $_SESSION['pass'] = $_POST['pass'];
         }
+<<<<<<< HEAD
 
         $this->set($auth = User::isAuth());
 
 
+=======
+>>>>>>> 69e86e9c9d4ecb17cbffcaae81c7e22be0bab678
     }
 
     public function registerAction()
