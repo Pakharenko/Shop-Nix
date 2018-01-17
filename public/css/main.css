@@ -10,6 +10,12 @@ body {
     margin-bottom: 20px;
 }
 
+.btn {
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 5px 2px;
+}
 
 .top-header {
     padding: 10px;
@@ -98,18 +104,16 @@ header nav {
     transition: .3s;
 }
 .card img {
-    margin: 10px auto 0;
-    width: 200px;
-    height: 200px;
+    margin: 10px 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
 }
 .block-products {
     margin-bottom: 20px;
+    text-align: center;
 }
-.card-footer button{
-    padding: 5px;
-    font-size: 14px;
-    cursor: pointer;
-}
+
 .card-footer .product-price {
     float: right;
     margin-top: 5px;

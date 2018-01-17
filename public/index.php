@@ -24,9 +24,6 @@ require '../vendor/autoload.php';
 
 require '../vendor/fw/libs/functions.php';
 
-require '../vendor/fw/libs/functions.php';
-
-
 spl_autoload_register(function ($class) {
     $file = ROOT . '/' . str_replace('\\', '/', $class) . '.php';
     if (is_file($file)) {

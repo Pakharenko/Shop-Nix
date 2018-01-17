@@ -7,11 +7,6 @@ class MainController extends AppController
 {
     public function indexAction()
     {
-
-
-        $auth = User::isAuth();
-        $this->set(compact('auth'));
-
         $title = 'Page Main - view INDEX';
         $this->set(compact('title'));
 

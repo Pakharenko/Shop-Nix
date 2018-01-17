@@ -131,7 +131,7 @@
 <footer class="footer">
     <div class="container">
         <p>Shop-NIX <?= date('Y'); ?> </p>
-        <p>[ Pro-Web-Master - Pakharenko E. ]</p>
+        <p>&copy; [ Pro-Web-Master - Pakharenko E. ]</p>
     </div>
 </footer>
 
