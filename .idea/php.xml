@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/fw/core" />
+      <path value="$PROJECT_DIR$/vendor/fw/libs" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/fw/providers" />
+    </include_path>
+  </component>
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter home="$PROJECT_DIR$/../../lib/php/modules/7.0" id="c36f14c7-4218-4f86-bdfb-9233067ffc6e" name="php7" debugger_id="php.debugger.XDebug" />
+      <interpreter home="$USER_HOME$/.PhpStorm2017.3/system/plugins/idea-php-latest-plugin/php-v7.2.1/php.sh" id="f87e51cf-af5f-4ee2-adec-4111c424e55c" name="PHP latest" debugger_id="php.debugger.XDebug" />
+    </interpreters>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
+</project>

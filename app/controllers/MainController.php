@@ -1,24 +1,17 @@
 <?php
+
 namespace app\controllers;
 
-use app\models\User;
+use app\models\Product;
 
 class MainController extends AppController
 {
     public function indexAction()
     {
-        $title = 'Page Main - view INDEX';
-        $this->set(compact('title'));
-
-
-        $title = 'Page Main - view INDEX';
-        $this->set(compact('title'));
-
+        $model = new Product();
+        $product_new = $model->getNewProducts();
+        $product_hits = $model->getHitsProducts();
+        $this->set(compact('product_new','product_hits'));
     }
 
-    public function testAction()
-    {
-        $title = 'Page Main - view INDEX';
-        $this->set(compact('title'));
-    }
 }

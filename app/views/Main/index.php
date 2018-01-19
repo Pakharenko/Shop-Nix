@@ -1,19 +1,16 @@
-<?php include '../prod_list.php'; ?>
-
 <h2>Новинки</h2
 <div class="container">
     <div class="row">
 
-        <?php foreach ($products as $product) : ?>
+        <?php foreach ($product_new as $product) : ?>
 
             <div class="col-md-4 block-products">
                 <div class="card">
-                    <img class="card-img-top" src="public/images/ap.jpeg"
+                    <img class="card-img-top" src="public/images/<?= $product['image'];?>"
                          alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title"><a href="/product"><?= $product['title']; ?></a></h4>
-                        <p class="card-text"><?= $product['desc']; ?></p>
-                        <p class="card-text count-stock">Кол-во на складе: <?= $product['count_goods']; ?> шт.</p>
+                        <h4 class="card-title"><a href="/product/<?= $product['id']; ?>"><?= $product['name']; ?></a></h4>
+                        <p class="card-text"><?= $product['tiny_desc']; ?></p>
                     </div>
                     <div class="card-footer">
                         <a href="/cart" class="btn btn-success">В корзину</a>
@@ -31,16 +28,15 @@
     <div class="container">
         <div class="row">
 
-            <?php foreach ($products as $product) : ?>
+            <?php foreach ($product_hits as $product) : ?>
 
                 <div class="col-md-4 block-products">
                     <div class="card">
-                        <img class="card-img-top" src="public/images/apple.jpg"
+                        <img class="card-img-top" src="public/images/<?= $product['image']; ?>"
                              alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="/product"><?= $product['title']; ?></a></h4>
-                            <p class="card-text"><?= $product['desc']; ?></p>
-                            <p class="card-text count-stock">Кол-во на складе: <?= $product['count_goods']; ?> шт.</p>
+                            <h4 class="card-title"><a href="/product/<?= $product['id']; ?>"><?= $product['name']; ?></a></h4>
+                            <p class="card-text"><?= $product['tiny_desc']; ?></p>
                         </div>
                         <div class="card-footer">
                             <a href="/cart" class="btn btn-success">В корзину</a>

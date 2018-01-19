@@ -10,6 +10,14 @@
 <body>
 
 <h1>Main</h1>
+<?= $title;?>
+<ul class="sidebar-nav">
+    <?php foreach ($categories as $category) :?>
+        <li><a href=""><?= $category; ?></a></li>
+    <?php endforeach;?>
+</ul>
+
+
 
 <?= $content ?>
 

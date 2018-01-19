@@ -1,13 +1,26 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 17.01.18
- * Time: 10:44
- */
+
 namespace app\models;
 
-class Product
+use fw\core\base\Model;
+
+class Product extends Model
 {
+    protected $table = 'products';
+
+    public function getNewProducts()
+    {
+        return $this->findBySql("SELECT * FROM products WHERE is_new = 1 ORDER BY id DESC LIMIT 3");
+    }
+
+    public function getHitsProducts()
+    {
+        return $this->findBySql("SELECT * FROM products WHERE is_hits = 1 ORDER BY id DESC LIMIT 3");
+    }
+
+    public function getAllProducts()
+    {
+        return $this->findBySql("SELECT * FROM products");
+    }
 
 }

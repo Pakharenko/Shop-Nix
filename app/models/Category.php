@@ -1,13 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 17.01.18
- * Time: 10:44
- */
+
 namespace app\models;
 
-class Category
+use fw\core\base\Model;
+
+class Category extends Model
 {
+
+    public function getCategories()
+    {
+        return $this->findBySql("SELECT * FROM categories");
+    }
 
 }

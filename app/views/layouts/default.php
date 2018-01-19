@@ -1,3 +1,4 @@
+<?php $cat = new \fw\providers\CategoryProvider(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,10 +50,10 @@
                         <a class="nav-link" href="/">Главная<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Блог</a>
+                        <a class="nav-link" href="/blog">Блог</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
+                        <a class="nav-link" href="/contact">Контакты</a>
                     </li>
                 </ul>
 
@@ -84,6 +85,7 @@
 </div>
 
 
+
 <main>
     <div class="content">
         <div class="container">
@@ -92,32 +94,33 @@
 
                     <div class="sidebar">
                         <h3>Категории</h3>
+                        <a class="text-danger" href="/catalog">Все товары...</a>
                         <ul class="sidebar-nav">
-                            <li><a href="">Lenovo</a></li>
-                            <li><a href="">Nokia</a></li>
-                            <li><a href="">Samsung</a></li>
-                            <li>
 
-                                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                                   aria-expanded="false">
-                                    Xiaomi
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    <a class="dropdown-item" href="#">Separated link</a>
-                                </div>
+                            <?php foreach ($cat->run() as $category) :?>
+                                <li><a href="/category/<?= $category['id'];?>"><?= $category['name']; ?></a></li>
+                            <?php endforeach;?>
 
-
-                            </li>
-                            <li><a href="">Nomi</a></li>
+<!--                            <li>-->
+<!--                                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"-->
+<!--                                   aria-expanded="false">-->
+<!--                                    Xiaomi-->
+<!--                                </a>-->
+<!--                                <div class="dropdown-menu">-->
+<!--                                    <a class="dropdown-item" href="#">Action</a>-->
+<!--                                    <a class="dropdown-item" href="#">Another action</a>-->
+<!--                                    <a class="dropdown-item" href="#">Something else here</a>-->
+<!--                                    <a class="dropdown-item" href="#">Separated link</a>-->
+<!--                                </div>-->
+<!--                            </li>-->
                         </ul>
 
                         <h3>Фильтры</h3>
                     </div>
 
+
                 </div>
+
                 <div class="col-md-9 block-product-items">
 
                     <?= $content; ?>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - shop@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="shop">
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="categories"/>
+    <table id="4" parent="2" name="products"/>
+    <column id="5" parent="3" name="categoty_id">
+      <DataType>int(5)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="6" parent="3" name="title">
+      <DataType>tinytext|0</DataType>
+    </column>
+    <column id="7" parent="3" name="parent_id">
+      <DataType>int(5)|0</DataType>
+    </column>
+    <key id="8" parent="3" name="PRIMARY">
+      <ColNames>categoty_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="9" parent="4" name="product_id">
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="10" parent="4" name="title">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="11" parent="4" name="categoty_id">
+      <DataType>int(10)|0</DataType>
+    </column>
+    <index id="12" parent="4" name="categoty_id">
+      <ColNames>categoty_id</ColNames>
+    </index>
+    <key id="13" parent="4" name="PRIMARY">
+      <ColNames>product_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="14" parent="4" name="products_ibfk_1">
+      <ColNames>categoty_id</ColNames>
+      <RefTableName>categories</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>categoty_id</RefColNames>
+      <OnUpdate>restrict</OnUpdate>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>
