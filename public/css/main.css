@@ -6,6 +6,10 @@ body {
     margin-bottom: 60px;
     background: #eee;
 }
+#myTab {
+    margin-top: 30px;
+}
+
 .block-user-title {
     margin-bottom: 20px;
 }
@@ -126,6 +130,9 @@ header nav {
 
 main {
     margin-bottom: 50px;
+}
+.category-active {
+    background: #fff;
 }
 
 

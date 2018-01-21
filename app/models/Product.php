@@ -23,4 +23,9 @@ class Product extends Model
         return $this->findBySql("SELECT * FROM products");
     }
 
+    public function getProductCategory($categoryId)
+    {
+        return $this->findBySql("SELECT * FROM products WHERE category_id = $categoryId ORDER BY id DESC LIMIT 9");
+    }
+
 }

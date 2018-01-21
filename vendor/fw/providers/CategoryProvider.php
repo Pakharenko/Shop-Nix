@@ -14,6 +14,7 @@ class CategoryProvider
 
     public function run()
     {
+
         $category = new Category();
         return $category->getCategories();
     }

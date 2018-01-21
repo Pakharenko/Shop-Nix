@@ -25,9 +25,10 @@ require '../vendor/autoload.php';
 require '../vendor/fw/libs/functions.php';
 
 
-
-//Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$', ['controller' => 'PageController']);
-//Router::add('^page/(?P<alias>[a-z-]+)$',['controller'=>'UserController', 'action' => 'login']);
+//Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)/(?P<id>[0-9]+)?$');
+//Router::add('^catalog/(?P<action>[a-z-]+)/(?P<alias>[a-z]+)$', ['controller' => 'Catalog']);
+Router::add('^catalog/(?P<alias>[0-9]+)$',['controller'=>'Catalog', 'action' => 'category']);
+Router::add('^product/(?P<alias>[0-9]+)$',['controller'=>'Product', 'action' => 'index']);
 
 //Правила по умолчанию
 Router::add('^$', ['controller' => 'Main', 'action' => 'index']);

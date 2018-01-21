@@ -1,4 +1,3 @@
-
 <div class="block-product">
     <div class="container">
         <div class="row">
@@ -6,18 +5,12 @@
                 <img class="card-img-top" src="/../public/images/ap.jpeg" alt="Card image cap">
             </div>
             <div class="col-md-8">
-                <h1>Name Products</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab deleniti dolorum
-                    eos saepe sit tempore tenetur ullam? Animi distinctio ea illum iusto
-                    laborum magnam necessitatibus, quasi veritatis. Illo, nemo, repudiandae!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at autem
-                    corporis
-                    eaque earum eos est excepturi fugit ipsum modi nam natus numquam officiis,
-                    omnis,
-                    repellendus ullam vero voluptate voluptates!</p>
-
-                <span class="product-price">Цена: 142.55 <i class="fa fa-money"></i></span>
-                <button type="button" class="btn btn-success">В корзину</button>
+                <?php foreach ($products as $product) : ?>
+                <h1><?= $product['name'];?></h1>
+                <p><?= $product['description'];?></p>
+                <span class="product-price">Цена: <?= $product['price'];?> <i class="fa fa-money"></i></span><br>
+                    <a href="/cart" class="btn btn-success">В корзину</a>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

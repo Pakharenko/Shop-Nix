@@ -12,4 +12,13 @@ class CatalogController extends AppController
         $product_all = $model->getAllProducts();
         $this->set(compact('product_all'));
     }
+
+    public function categoryAction()
+    {
+        $id = $this->route['alias'];
+        $model = new Product();
+        $product_category = $model->getProductCategory($id);
+        $this->set(compact('product_category'));
+    }
+
 }

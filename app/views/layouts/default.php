@@ -85,7 +85,6 @@
 </div>
 
 
-
 <main>
     <div class="content">
         <div class="container">
@@ -97,22 +96,29 @@
                         <a class="text-danger" href="/catalog">Все товары...</a>
                         <ul class="sidebar-nav">
 
-                            <?php foreach ($cat->run() as $category) :?>
-                                <li><a href="/category/<?= $category['id'];?>"><?= $category['name']; ?></a></li>
-                            <?php endforeach;?>
+                            <?php foreach ($cat->run() as $category) : ?>
 
-<!--                            <li>-->
-<!--                                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"-->
-<!--                                   aria-expanded="false">-->
-<!--                                    Xiaomi-->
-<!--                                </a>-->
-<!--                                <div class="dropdown-menu">-->
-<!--                                    <a class="dropdown-item" href="#">Action</a>-->
-<!--                                    <a class="dropdown-item" href="#">Another action</a>-->
-<!--                                    <a class="dropdown-item" href="#">Something else here</a>-->
-<!--                                    <a class="dropdown-item" href="#">Separated link</a>-->
-<!--                                </div>-->
-<!--                            </li>-->
+                               <?php if (isset($this->route['alias'] )) :?>
+                                <li <?php if ($this->route['alias'] == $category['id']) echo "class = category-active"; ?> >
+                                    <a href="/catalog/<?= $category['id']; ?>"><?= $category['name']; ?></a></li>
+                                <?php else : ?>
+                                <li><a href="/catalog/<?= $category['id']; ?>"><?= $category['name']; ?></a></li>
+                                <?php endif;?>
+
+                            <?php endforeach; ?>
+
+                            <!--                            <li>-->
+                            <!--                                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"-->
+                            <!--                                   aria-expanded="false">-->
+                            <!--                                    Xiaomi-->
+                            <!--                                </a>-->
+                            <!--                                <div class="dropdown-menu">-->
+                            <!--                                    <a class="dropdown-item" href="#">Action</a>-->
+                            <!--                                    <a class="dropdown-item" href="#">Another action</a>-->
+                            <!--                                    <a class="dropdown-item" href="#">Something else here</a>-->
+                            <!--                                    <a class="dropdown-item" href="#">Separated link</a>-->
+                            <!--                                </div>-->
+                            <!--                            </li>-->
                         </ul>
 
                         <h3>Фильтры</h3>
@@ -124,6 +130,7 @@
                 <div class="col-md-9 block-product-items">
 
                     <?= $content; ?>
+
                 </div>
             </div>
         </div>
