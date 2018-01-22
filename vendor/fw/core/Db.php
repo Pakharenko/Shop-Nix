@@ -9,7 +9,6 @@ class Db
     {
         $db = require ROOT . '/config/config_db.php'; //подключение к базе данных
         $options = [
-            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
             \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
         ];
         $this->pdo = new \PDO($db['dsn'], $db['user'], $db['pass'], $options);

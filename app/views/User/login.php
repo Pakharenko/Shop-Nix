@@ -7,15 +7,14 @@
         <div class="col-md-6">
             <form method="post" action="">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"  placeholder="Введите nix@mail.ru">
+                    <label for="exampleInputEmail1">Ваш E-mail:</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" value="">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" name="pass" class="form-control" id="exampleInputPassword1"
-                           placeholder="Введите 123456">
+                    <label for="exampleInputPassword1">Ваш пароль:</label>
+                    <input type="password" name="pass" class="form-control" id="exampleInputPassword1" value="">
                 </div>
-                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" name="submit" class="btn btn-primary">Войти</button>
             </form>
         </div>
 
