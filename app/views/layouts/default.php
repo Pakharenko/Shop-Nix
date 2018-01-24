@@ -1,4 +1,6 @@
 <?php $cat = new \fw\providers\CategoryProvider(); ?>
+<?php new \fw\providers\Auth();?>
+<?php $user_auth;?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,17 +22,15 @@
                     +38(093) 082-95-05
                 </div>
                 <div class="col-md-4">
-                    <?php if (\app\models\User::isAuth()) : ?>
 
-                        <?= app\models\User::isAuth(); ?>
-
+<?= $_SESSION['user'];?>
                         <a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a>
-                    <?php else : ?>
+
                         <i class="fa fa-lock" aria-hidden="true"></i>
                         <a href="/user/login">Логин</a>
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <a href="/user/register">Регистрация</a>
-                    <?php endif; ?>
+
                 </div>
             </div>
         </div>

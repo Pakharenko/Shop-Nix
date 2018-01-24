@@ -8,11 +8,30 @@ class UserController extends AppController
 {
     public function loginAction()
     {
+        $model = new User();
+        $email = false;
+        $password = false;
+
         if (isset($_POST['submit'])) {
-            $_SESSION['email'] = $_POST['email'];
-            $_SESSION['pass'] = $_POST['pass'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            $errors = false;
+
+            $userId = $model->userData($email, $password);
+            var_dump($userId);
+
+            if ($userId == false) {
+                $errors[] = 'Неправильный логин или пароль';
+            } else {
+                User::auth($userId);
+                header("Location: /");
+            }
         }
-        $this->set($auth = User::isAuth());
+
+
+        $this->set(compact('email','password', 'errors'));
+
     }
 
     public function registerAction()
@@ -20,8 +39,6 @@ class UserController extends AppController
         $name = false;
         $email = false;
         $password = false;
-        $reg_user = false;
-
 
         $model = new User();
 
@@ -30,29 +47,28 @@ class UserController extends AppController
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-//            $errors = false;
-//            if (!User::validateName($name) ) {
-//                $errors[] = 'Имя не должно быть короче 2-х символов';
-//            }
-//            if (!User::validateEmail($email) ) {
-//                $errors[] = 'Неправильный email';
-//            }
-//            if (!User::validatePassword($password) ) {
-//                $errors[] = 'Пароль не должен быть короче 4-ох символов';
-//            }
-
-//            if ($errors == false) {
-//                $reg_user = $model->registerUser($name, $email, $password);
-//            }
+            $errors = false;
+            if (!User::validateName($name) ) {
+                $errors[] = 'Имя не должно быть короче 2-х символов';
+            }
+            if (!User::validateEmail($email) ) {
+                $errors[] = 'Неправильный email';
+            }
+            if (!User::validatePassword($password) ) {
+                $errors[] = 'Пароль не должен быть короче 4-ох символов';
+            }
 
 
-            $model->registerUser($name, $email, $password);
+            if ($model->emailExists($email)) {
+                $errors[] = 'Такой email уже используется!';
+            }
 
+            if ($errors == false) {
+                $model->registerUser($name, $email, $password);
+            }
         }
 
-
-
-//        $this->set(compact('name','email','password', 'errors', 'reg_user'));
+          $this->set(compact('name','email','password', 'errors'));
 
     }
 
