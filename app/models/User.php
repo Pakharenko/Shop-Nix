@@ -9,23 +9,14 @@ class User extends Model
 {
     public function registerUser($name, $email, $password)
     {
-      $this->findBySql("INSERT INTO users (`name`, `email`, `password`) VALUES ('$name','$email','$password')");
+      $this->findBySql(" INSERT INTO users (`name`, `email`, `password`) VALUES ('$name', '$email', '$password') ");
 
       return header("location: /user/register");
     }
 
     public function userData($email, $password)
     {
-        return $this->findBySql("SELECT * FROM users WHERE email = '$email' AND password = '$password' ");
-    }
-
-    public function emailExists($email)
-    {
-        $res = $this->findBySql("SELECT COUNT(*) FROM users WHERE email = '$email'");
-        if ($res) {
-            return true;
-        }
-        return false;
+        return $this->findBySql(" SELECT * FROM users WHERE email = '$email' AND password = '$password' ");
     }
 
     public static function auth($userId)
@@ -35,10 +26,10 @@ class User extends Model
 
     public static function isAuth()
     {
-        if (isset($_SESSION['user'])){
+        if (isset($_SESSION['user'])) {
             return $_SESSION['user'];
         }
-        header("location: /user/login");
+        return false;
     }
 
     public static function logout()

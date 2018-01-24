@@ -6,11 +6,14 @@ use app\models\User;
 
 class Auth
 {
-    public  function auth()
+    public function auth()
     {
-        $user_auth = User::isAuth();
-        if(!empty($user_auth)) {
-           return $this->set(['user_auth' => $user_auth]);
+        $user_auth = [];
+        if (!empty(User::isAuth())) {
+            foreach (User::isAuth() as $user) {
+                $user_auth = $user;
+            }
+            return $user_auth['name'];
         }
         return false;
     }

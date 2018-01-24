@@ -1,8 +1,7 @@
 <h3 class="block-user-title">Регистрация</h3>
 
-
-<?php if (isset($errors) && is_array($errors)): ?>
-        <?php foreach ($errors as $error): ?>
+<?php if (isset($errors) && is_array($errors)) : ?>
+        <?php foreach ($errors as $error) : ?>
             <p class="text-danger"> - <?php echo $error; ?></p>
         <?php endforeach; ?>
 <?php endif; ?>

@@ -1,6 +1,6 @@
 <?php $cat = new \fw\providers\CategoryProvider(); ?>
-<?php new \fw\providers\Auth();?>
-<?php $user_auth;?>
+<?php $auth = new \fw\providers\Auth();?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,14 +23,15 @@
                 </div>
                 <div class="col-md-4">
 
-<?= $_SESSION['user'];?>
+                    <?php if ($auth->auth()) : ?>
+                    <?= $auth->auth();?>
                         <a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a>
-
+                    <?php else : ?>
                         <i class="fa fa-lock" aria-hidden="true"></i>
                         <a href="/user/login">Логин</a>
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <a href="/user/register">Регистрация</a>
-
+                    <?php endif;?>
                 </div>
             </div>
         </div>

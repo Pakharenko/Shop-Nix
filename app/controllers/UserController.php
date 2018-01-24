@@ -19,7 +19,6 @@ class UserController extends AppController
             $errors = false;
 
             $userId = $model->userData($email, $password);
-            var_dump($userId);
 
             if ($userId == false) {
                 $errors[] = 'Неправильный логин или пароль';
@@ -29,8 +28,7 @@ class UserController extends AppController
             }
         }
 
-
-        $this->set(compact('email','password', 'errors'));
+        $this->set(compact('email', 'password', 'errors'));
 
     }
 
@@ -48,19 +46,14 @@ class UserController extends AppController
             $password = $_POST['password'];
 
             $errors = false;
-            if (!User::validateName($name) ) {
+            if (!User::validateName($name)) {
                 $errors[] = 'Имя не должно быть короче 2-х символов';
             }
-            if (!User::validateEmail($email) ) {
+            if (!User::validateEmail($email)) {
                 $errors[] = 'Неправильный email';
             }
-            if (!User::validatePassword($password) ) {
+            if (!User::validatePassword($password)) {
                 $errors[] = 'Пароль не должен быть короче 4-ох символов';
-            }
-
-
-            if ($model->emailExists($email)) {
-                $errors[] = 'Такой email уже используется!';
             }
 
             if ($errors == false) {
@@ -68,7 +61,7 @@ class UserController extends AppController
             }
         }
 
-          $this->set(compact('name','email','password', 'errors'));
+          $this->set(compact('name', 'email', 'password', 'errors'));
 
     }
 
