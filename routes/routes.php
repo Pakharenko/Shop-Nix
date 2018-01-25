@@ -6,6 +6,8 @@ use fw\core\Router;
 
 Router::add('^catalog/(?P<alias>[0-9]+)$',['controller'=>'Catalog', 'action' => 'category']);
 Router::add('^product/(?P<alias>[0-9]+)$',['controller'=>'Product', 'action' => 'index']);
+Router::add('^cart/(?P<action>[a-z-]+)/(?P<alias>[0-9]+)$',['controller'=>'Cart', 'action' => 'index']);
+Router::add('^cart/(?P<action>[a-z-]+)/(?P<alias>[0-9]+)$',['controller'=>'Cart', 'action' => 'addAjax']);
 
 //Правила по умолчанию
 Router::add('^$', ['controller' => 'Main', 'action' => 'index']);

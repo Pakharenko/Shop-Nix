@@ -13,9 +13,9 @@
                         <p class="card-text"><?= $product['tiny_desc']; ?></p>
                     </div>
                     <div class="card-footer">
-                        <a href="/cart" class="btn btn-success">В корзину</a>
-                        <span class="product-price">Цена: <?= $product['price']; ?> <i
-                                class="fa fa-money" aria-hidden="true"></i></span>
+                        <a href="/cart/add/<?= $product['id']; ?>"  class="btn btn-success">В корзину</a>
+                        <span class="product-price">Цена <?= $product['price']; ?> <i
+                                    class="fa fa-money" aria-hidden="true"></i></span>
                     </div>
                 </div>
             </div>

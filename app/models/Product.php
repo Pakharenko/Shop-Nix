@@ -28,4 +28,10 @@ class Product extends Model
         return $this->findBySql("SELECT * FROM products WHERE category_id = $categoryId ORDER BY id DESC LIMIT 9");
     }
 
+    public function getProdustId($id)
+    {
+        $string_id = implode(',', $id);
+        return $this->findBySql("SELECT * FROM products WHERE id IN($string_id)");
+    }
+
 }

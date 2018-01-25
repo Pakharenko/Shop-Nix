@@ -1,5 +1,6 @@
 <?php $cat = new \fw\providers\CategoryProvider(); ?>
 <?php $auth = new \fw\providers\Auth();?>
+<?php $cart = new \fw\providers\Cart();?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +65,7 @@
                 </form>
 
                 <div class="header-block-cart">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-shopping-cart" aria-hidden="true"><span id="cart-count"><?= $cart::totalProductsCart(); ?></span></i>
                     <a href="/cart"> Корзина </a>
                     <span> 0.00 grn </span>
                 </div>
@@ -157,5 +158,18 @@
         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/793381aa2c.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".add-to-cart").click(function () {
+            var id = $(this).attr("data-id");
+            $.post("/cart/addAjax/"+id, {}, function (data) {
+                $("#cart-count").html(data);
+            });
+            return false;
+        });
+    });
+</script>
+
 </body>
 </html>

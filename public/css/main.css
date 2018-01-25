@@ -6,6 +6,15 @@ body {
     margin-bottom: 60px;
     background: #eee;
 }
+#cart-count {
+    background: Tomato;
+    font-size: 10px;
+    border-radius: 100%;
+    padding: 5px 7px;
+    color: #fff;
+    font-weight: 600;
+    vertical-align: top;
+}
 #myTab {
     margin-top: 30px;
 }

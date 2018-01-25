@@ -1,4 +1,4 @@
-<h2>Новинки</h2
+<h2>Новинки</h2>
 <div class="container">
     <div class="row">
 
@@ -13,7 +13,7 @@
                         <p class="card-text"><?= $product['tiny_desc']; ?></p>
                     </div>
                     <div class="card-footer">
-                        <a href="/cart" class="btn btn-success">В корзину</a>
+                        <a href="/cart/add/<?= $product['id']; ?>" class="btn btn-success add-to-cart" data-id="<?= $product['id']?>">В корзину</a>
                                                 <span class="product-price">Цена: <?= $product['price']; ?> <i
                                                         class="fa fa-money" aria-hidden="true"></i></span>
                     </div>
@@ -24,7 +24,7 @@
     </div>
 
 
-    <h2>Хиты продаж</h2
+    <h2>Хиты продаж</h2>
     <div class="container">
         <div class="row">
 
@@ -39,7 +39,7 @@
                             <p class="card-text"><?= $product['tiny_desc']; ?></p>
                         </div>
                         <div class="card-footer">
-                            <a href="/cart" class="btn btn-success">В корзину</a>
+                            <a href="/cart/add/<?= $product['id']; ?>"  class="btn btn-success">В корзину</a>
                                                 <span class="product-price">Цена <?= $product['price']; ?> <i
                                                         class="fa fa-money" aria-hidden="true"></i></span>
                         </div>
