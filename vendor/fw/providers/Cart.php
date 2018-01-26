@@ -1,6 +1,7 @@
 <?php
 
 namespace fw\providers;
+use app\models\Product;
 
 class Cart
 {
@@ -57,6 +58,20 @@ class Cart
             }
         }
         return $total;
+    }
+
+    public static function getTotalPriceInHeader()
+    {
+        $model = new Product();
+        $products_cart = Cart::getProducts();
+
+        if ($products_cart) {
+            $product_id = array_keys($products_cart);
+            $products = $model->getProdustId($product_id);
+            $total_products_price = Cart::getTotalPrice($products);
+            return $total_products_price;
+        }
+        return $total_products_price = 0;
     }
 
     public static function deleteProduct($id)

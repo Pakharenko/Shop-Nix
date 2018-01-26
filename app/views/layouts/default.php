@@ -1,6 +1,7 @@
 <?php $cat = new \fw\providers\CategoryProvider(); ?>
-<?php $auth = new \fw\providers\Auth();?>
-<?php $cart = new \fw\providers\Cart();?>
+<?php $auth = new \fw\providers\Auth(); ?>
+<?php $cart = new \fw\providers\Cart(); ?>
+<?php $crumbs = new \fw\providers\Breadcrumbs(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,14 +26,14 @@
                 <div class="col-md-4">
 
                     <?php if ($auth->auth()) : ?>
-                    <?= $auth->auth();?>
+                        <?= $auth->auth(); ?>
                         <a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a>
                     <?php else : ?>
                         <i class="fa fa-lock" aria-hidden="true"></i>
                         <a href="/user/login">Логин</a>
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <a href="/user/register">Регистрация</a>
-                    <?php endif;?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -52,22 +53,23 @@
                         <a class="nav-link" href="/">Главная<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/blog">Блог</a>
+                        <a class="nav-link" href="/post">Блог</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Контакты</a>
                     </li>
                 </ul>
 
-                <form class="form-inline my-2 my-lg-10">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+                <form class="form-inline my-2 my-lg-10" method="post" action="/search">
+                    <input class="form-control mr-sm-2" name="text" type="search" placeholder="Поиск" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" name="search" type="submit">Поиск</button>
                 </form>
 
                 <div class="header-block-cart">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"><span id="cart-count"><?= $cart::totalProductsCart(); ?></span></i>
+                    <i class="fa fa-shopping-cart" aria-hidden="true"><span
+                                id="cart-count"><?= $cart::totalProductsCart(); ?></span></i>
                     <a href="/cart"> Корзина </a>
-                    <span> 0.00 grn </span>
+                    <span> <?= $cart::getTotalPriceInHeader(); ?> grn </span>
                 </div>
 
             </div>
@@ -79,9 +81,13 @@
 <div class="container">
     <nav aria-label="breadcrumb col">
         <ol class="breadcrumb d-flex justify-content-center">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+
+            <?php foreach ($crumbs::crumbs() as $crumb) : ?>
+            <?php if ($crumb == '') :?>
+                <li>Главная страница</li>
+            <?php endif;?>
+                <li class="breadcrumb-item"><a href="/<?= $crumb; ?>"><?= $crumb; ?></a></li>
+            <?php endforeach; ?>
         </ol>
     </nav>
 </div>
@@ -99,13 +105,12 @@
                         <ul class="sidebar-nav">
 
                             <?php foreach ($cat->run() as $category) : ?>
-
-                               <?php if (isset($this->route['alias'] )) :?>
-                                <li <?php if ($this->route['alias'] == $category['id']) echo "class = category-active"; ?> >
-                                    <a href="/catalog/<?= $category['id']; ?>"><?= $category['name']; ?></a></li>
+                                <?php if (isset($this->route['alias'])) : ?>
+                                    <li <?php if ($this->route['alias'] == $category['id']) echo "class = category-active"; ?> >
+                                        <a href="/catalog/<?= $category['id']; ?>"><?= $category['name']; ?></a></li>
                                 <?php else : ?>
-                                <li><a href="/catalog/<?= $category['id']; ?>"><?= $category['name']; ?></a></li>
-                                <?php endif;?>
+                                    <li><a href="/catalog/<?= $category['id']; ?>"><?= $category['name']; ?></a></li>
+                                <?php endif; ?>
 
                             <?php endforeach; ?>
 
@@ -160,10 +165,10 @@
 <script src="https://use.fontawesome.com/793381aa2c.js"></script>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $(".add-to-cart").click(function () {
             var id = $(this).attr("data-id");
-            $.post("/cart/addAjax/"+id, {}, function (data) {
+            $.post("/cart/addAjax/" + id, {}, function (data) {
                 $("#cart-count").html(data);
             });
             return false;

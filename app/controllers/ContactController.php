@@ -1,13 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 17.01.18
- * Time: 10:37
- */
+
 namespace app\controllers;
+
+use app\models\Contact;
 
 class ContactController extends AppController
 {
+
+    public function indexAction()
+    {
+        $model = new Contact();
+        $this->set(['contacts' => $model->getContacts()]);
+    }
 
 }

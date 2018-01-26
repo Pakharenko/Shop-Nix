@@ -19,8 +19,7 @@ class CartController extends AppController
             $total_products_price = Cart::getTotalPrice($products);
         }
 
-        $this->set(compact('total_products_price','products', 'products_cart'));
-
+        $this->set(compact( 'total_products_price','products', 'products_cart') );
     }
 
     public function addAction()

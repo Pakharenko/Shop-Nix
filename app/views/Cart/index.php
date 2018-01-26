@@ -20,8 +20,8 @@
                                  alt="Card image cap"></th>
             <td><?= $product['name']; ?></td>
             <td><?= $products_cart[$product['id']]; ?></td>
-            <td><?= $product['price'] * $products_cart[$product['id']]; ?></td>
-            <td><a class="delete" href="/cart/delete/<?= $product['id'];?>""><i class="fa fa-trash" aria-hidden="true"></i></a>
+            <td><?= $product['price'] * $products_cart[$product['id']]; ?> grn</td>
+            <td><a class="delete" href="/cart/delete/<?= $product['id'];?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
             </td>
             </tr>
             <?php endforeach; ?>

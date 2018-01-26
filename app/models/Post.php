@@ -1,13 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 17.01.18
- * Time: 10:44
- */
+
 namespace app\models;
 
-class Post
+use fw\core\base\Model;
+
+class Post extends Model
 {
+    public function getAllPosts()
+    {
+        return $this->findBySql("SELECT * FROM posts ORDER BY id DESC");
+    }
+
+    public function getOnePost($id)
+    {
+        return $this->findBySql("SELECT * FROM posts WHERE id = $id");
+    }
 
 }

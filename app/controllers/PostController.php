@@ -1,13 +1,24 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 17.01.18
- * Time: 10:39
- */
+
 namespace app\controllers;
+
+use app\models\Post;
 
 class PostController extends AppController
 {
+
+    public function indexAction()
+    {
+        $model = new Post();
+        $this->set(['posts' => $model->getAllPosts()]);
+    }
+
+    public function viewAction()
+    {
+        $model = new Post();
+        $id = $this->route['alias'];
+        $post = $model->getOnePost($id);
+        $this->set(['post' => $post]);
+    }
 
 }

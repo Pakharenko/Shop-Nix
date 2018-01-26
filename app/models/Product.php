@@ -34,4 +34,9 @@ class Product extends Model
         return $this->findBySql("SELECT * FROM products WHERE id IN($string_id)");
     }
 
+    public function searchProduct($str)
+    {
+        return $this->findBySql("SELECT * FROM products WHERE name LIKE '%$str%' ");
+    }
+
 }
