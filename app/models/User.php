@@ -19,6 +19,12 @@ class User extends Model
         return $this->findBySql(" SELECT * FROM users WHERE email = '$email' AND password = '$password' ");
     }
 
+    public function editUser($id, $name, $email, $password)
+    {
+        $res = $this->findBySql(" UPDATE users SET `name` = '$name', email = '$email', password = '$password' WHERE id = $id");
+        var_dump($id);
+    }
+
     public static function auth($userId)
     {
         $_SESSION['user'] = $userId;

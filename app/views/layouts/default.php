@@ -26,7 +26,9 @@
                 <div class="col-md-4">
 
                     <?php if ($auth->auth()) : ?>
-                        <?= $auth->auth(); ?>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <a href="/cabinet">Личный кабинет </a>,
+                        <span class="text-success"><?= $auth->auth(); ?></span>
                         <a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a>
                     <?php else : ?>
                         <i class="fa fa-lock" aria-hidden="true"></i>
