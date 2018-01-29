@@ -49,6 +49,8 @@ class CabinetController extends AppController
 
             if ($errors == false) {
                 $model->editUser($id, $name, $email, $password);
+                $userId = $model->userData($email, $password);
+                User::auth($userId);
             }
         }
 
