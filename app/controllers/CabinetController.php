@@ -30,13 +30,12 @@ class CabinetController extends AppController
         }
 
         $id = intval($name_user_edit['id']);
+        if (isset($_POST['edit_user'])) {
 
-        if (isset($_POST['edit'])) {
             $name = $_POST['name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            var_dump($name);
 
             if (!User::validateName($name)) {
                 $errors[] = 'Имя не должно быть короче 2-х символов';
@@ -50,11 +49,8 @@ class CabinetController extends AppController
 
             if ($errors == false) {
                 $model->editUser($id, $name, $email, $password);
-                header("location: /cabinet/edit");
             }
         }
-
-        var_dump($model->editUser());
 
         $this->set([
             'name_user_edit' => $name_user_edit,

@@ -21,8 +21,11 @@ class User extends Model
 
     public function editUser($id, $name, $email, $password)
     {
-        $res = $this->findBySql(" UPDATE users SET `name` = '$name', email = '$email', password = '$password' WHERE id = $id");
         var_dump($id);
+        var_dump($name);
+        var_dump($email);
+        var_dump($password);
+        return $this->findBySql(" UPDATE users SET  name = $name, email = $email, password = $password WHERE id = $id ");
     }
 
     public static function auth($userId)

@@ -26,7 +26,7 @@
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1"
                            value="<?= $name_user_edit['password']; ?>">
                 </div>
-                <button type="submit" name="edit" class="btn btn-primary">Редактировать</button>
+                <input type="submit" name="edit_user" class="btn btn-primary" value="Редактировать">
             </form>
         </div>
 
