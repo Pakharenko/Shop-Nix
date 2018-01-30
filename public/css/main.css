@@ -182,6 +182,13 @@ main {
     margin-bottom: 20px;
 }
 
+.block-orders {
+    text-align: center;
+}
+.block-orders form {
+    width: 50%;
+    margin: 0 auto 50px;
+}
 
 footer {
     background: #fff;

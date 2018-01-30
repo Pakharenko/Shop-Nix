@@ -51,6 +51,7 @@ class CabinetController extends AppController
                 $model->editUser($id, $name, $email, $password);
                 $userId = $model->userData($email, $password);
                 User::auth($userId);
+                header("location: /cabinet");
             }
         }
 

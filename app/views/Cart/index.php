@@ -32,7 +32,7 @@
     <div class="count-price-cart">
         <div class="container">
             <p>Общая стоимость: <span><?= $total_products_price; ?> grn</span></p>
-            <a href=""> Оформление заказа </a>
+            <a href="/cart/orders"> Оформление заказа </a>
         </div>
     </div>
 

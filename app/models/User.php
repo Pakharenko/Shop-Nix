@@ -69,4 +69,23 @@ class User extends Model
         return false;
     }
 
+    public static function validatePhone($phone)
+    {
+        if (strlen($phone) >= 10) {
+            return true;
+        }
+        return false;
+    }
+
+    public static function validateComment($comment)
+    {
+        if (strlen($comment) >= 4) {
+            return true;
+        }
+        return false;
+    }
+
+
+
+
 }

@@ -88,7 +88,7 @@
             <?php if ($crumb == '') :?>
                 <li>Главная страница</li>
             <?php endif;?>
-                <li class="breadcrumb-item"><a href="/<?= $crumb; ?>"><?= $crumb; ?></a></li>
+                <li class="breadcrumb-item"><?= $crumb; ?></li>
             <?php endforeach; ?>
         </ol>
     </nav>

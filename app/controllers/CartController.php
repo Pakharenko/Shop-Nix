@@ -2,8 +2,10 @@
 
 namespace app\controllers;
 
+use app\models\Order;
 use fw\providers\Cart;
 use app\models\Product;
+use app\models\User;
 
 class CartController extends AppController
 {
@@ -39,6 +41,54 @@ class CartController extends AppController
     {
         Cart::deleteProduct($this->route['alias']);
         header("Location: /cart");
+    }
+
+    public function ordersAction()
+    {
+        $products_cart = Cart::getProducts();
+        $model = new Order();
+
+        if (empty($products_cart)) {
+            header("location: /");
+        }
+
+        $name_user = false;
+        
+        if (User::isAuth()) {
+            foreach (User::isAuth() as $user) {
+                $user_id = $user['id'];
+                $name_user = $user['name'];
+            }
+        } else {
+            $user_id = 0;
+            $name_user = false;
+        }
+
+        if (isset($_POST['submit'])) {
+            $name = $_POST['name'];
+            $phone = $_POST['phone'];
+            $comment = $_POST['comment'];
+
+            $errors = false;
+            if (!User::validateName($name)) {
+                $errors[] = 'Имя не должно быть короче 2-х символов';
+            }
+            if (!User::validatePhone($phone)) {
+                $errors[] = 'Неправильный номер';
+            }
+            if (!User::validateComment($comment)) {
+                $errors[] = 'Поле не должен быть короче 4-ох символов';
+            }
+
+            if ($errors == false) {
+                $model->saveOrders($user_id, $name, $phone, $comment, $products_cart);
+                Cart::clear();
+                header("location: /cart");
+            }
+            $this->set(compact( 'phone', 'comment', 'errors'));
+        }
+
+        $this->set(['name_user' => $name_user]);
     }
     
 }
