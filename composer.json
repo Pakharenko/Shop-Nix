@@ -6,12 +6,15 @@
             "email": "paharenko1985@mail.ru"
         }
     ],
-    "require": {
-    },
+
     "autoload": {
         "psr-4": {
             "fw\\": "vendor/fw",
-            "app\\": "app"
+            "app\\": "app",
+            "Tests\\": "tests/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
     }
 }

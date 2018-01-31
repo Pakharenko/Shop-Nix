@@ -21,7 +21,7 @@ class CartController extends AppController
             $total_products_price = Cart::getTotalPrice($products);
         }
 
-        $this->set(compact( 'total_products_price','products', 'products_cart') );
+        $this->set(compact('total_products_price', 'products', 'products_cart'));
     }
 
     public function addAction()
@@ -45,6 +45,17 @@ class CartController extends AppController
 
     public function ordersAction()
     {
+        $model_cart = new Product();
+        $products_cart = Cart::getProducts();
+
+        if ($products_cart) {
+            $product_id = array_keys($products_cart);
+            $products = $model_cart->getProdustId($product_id);
+            $total_products_price = Cart::getTotalPrice($products);
+        }
+
+
+        $errors = false;
         $products_cart = Cart::getProducts();
         $model = new Order();
 
@@ -52,8 +63,9 @@ class CartController extends AppController
             header("location: /");
         }
 
+
         $name_user = false;
-        
+
         if (User::isAuth()) {
             foreach (User::isAuth() as $user) {
                 $user_id = $user['id'];
@@ -69,7 +81,6 @@ class CartController extends AppController
             $phone = $_POST['phone'];
             $comment = $_POST['comment'];
 
-            $errors = false;
             if (!User::validateName($name)) {
                 $errors[] = 'Имя не должно быть короче 2-х символов';
             }
@@ -85,10 +96,14 @@ class CartController extends AppController
                 Cart::clear();
                 header("location: /cart");
             }
-            $this->set(compact( 'phone', 'comment', 'errors'));
+            $this->set(compact('phone', 'comment', 'errors'));
         }
 
-        $this->set(['name_user' => $name_user]);
+        $this->set([
+            'name_user' => $name_user,
+            'errors' => $errors,
+            'total_products_price' => $total_products_price,
+        ]);
     }
-    
+
 }

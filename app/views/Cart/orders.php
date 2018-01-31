@@ -1,7 +1,11 @@
+<?php $cart = new \fw\providers\Cart(); ?>
+
 <h2>Оформление Заказа</h2>
 
 <div class="block-orders">
-    <p class="text-primary">Вы выбрали 8 товаров, на сумму 1200.70 grn</p>
+    <p class="text-primary">Вы выбрали <?= $cart::totalProductsCart(); ?>
+        товаров, на сумму <?= $total_products_price; ?> grn
+    </p>
 <h5 class="text-dark">Заполните Ваши данные для оформления заказа</h5>
 
     <?php if (isset($errors) && is_array($errors)) : ?>

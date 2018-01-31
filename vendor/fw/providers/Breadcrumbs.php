@@ -20,7 +20,11 @@ class Breadcrumbs
         return $crumbs;
     }
 
-
+    public static function testAllResult($a, $b)
+    {
+        $c = $a * $b;
+        return $c;
+    }
 
 
 }

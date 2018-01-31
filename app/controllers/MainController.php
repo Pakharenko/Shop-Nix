@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Product;
+use fw\providers\Breadcrumbs;
 
 class MainController extends AppController
 {
@@ -11,7 +12,9 @@ class MainController extends AppController
         $model = new Product();
         $product_new = $model->getNewProducts();
         $product_hits = $model->getHitsProducts();
-        $this->set(compact('product_new','product_hits'));
+        $result = Breadcrumbs::testAllResult(10,10);
+
+        $this->set(compact('product_new','product_hits','result'));
     }
 
 }

@@ -1,4 +1,7 @@
 <h2>Новинки</h2>
+
+<?= $result; ?>
+
 <div class="container">
     <div class="row">
 
