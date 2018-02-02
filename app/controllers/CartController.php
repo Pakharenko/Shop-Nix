@@ -77,6 +77,7 @@ class CartController extends AppController
         }
 
         if (isset($_POST['submit'])) {
+            
             $name = $_POST['name'];
             $phone = $_POST['phone'];
             $comment = $_POST['comment'];

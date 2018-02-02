@@ -2,6 +2,8 @@
 
 namespace fw\providers;
 
+use app\models\Comment;
+
 class Breadcrumbs
 {
 
@@ -20,10 +22,22 @@ class Breadcrumbs
         return $crumbs;
     }
 
-    public static function testAllResult($a, $b)
+
+    public function subscribe() 
     {
-        $c = $a * $b;
-        return $c;
+
+        $subscribe = new Comment;
+
+        if (isset($_POST['subscribe'])) {
+
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+
+            $subscribe->setSubscribe($name, $email);
+            header("location: /");
+
+        }
+
     }
 
 

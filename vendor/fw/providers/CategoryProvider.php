@@ -3,20 +3,21 @@
 namespace fw\providers;
 
 use app\models\Category;
+use app\models\Product;
 
 class CategoryProvider
 {
 
-    public function __construct()
+    public function getCategory()
     {
-      $this->run();
-    }
-
-    public function run()
-    {
-
         $category = new Category();
         return $category->getCategories();
+    }
+
+    public function getPopularProducts()
+    {
+    	$model = new Product;
+    	return $model->getPopularProducts();
     }
 
 }

@@ -4,7 +4,7 @@
 
 <div class="block-orders">
     <p class="text-primary">Вы выбрали <?= $cart::totalProductsCart(); ?>
-        товаров, на сумму <?= $total_products_price; ?> grn
+        тов., на сумму <?= $total_products_price; ?> grn.
     </p>
 <h5 class="text-dark">Заполните Ваши данные для оформления заказа</h5>
 

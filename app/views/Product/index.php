@@ -1,15 +1,19 @@
 <div class="block-product">
     <div class="container">
         <div class="row">
+            <?php foreach ($products as $product) : ?>
             <div class="col-md-4">
-                <img class="card-img-top" src="/../public/images/ap.jpeg" alt="Card image cap">
+                <img class="card-img-top" src="/../public/images/<?= $product['image']; ?>" alt="<?= $product['name'];?>">
             </div>
             <div class="col-md-8">
-                <?php foreach ($products as $product) : ?>
                 <h1><?= $product['name'];?></h1>
                 <p><?= $product['description'];?></p>
-                <span class="product-price">Цена: <?= $product['price'];?> <i class="fa fa-money"></i></span><br>
-                    <a href="/cart" class="btn btn-success">В корзину</a>
+                    <div class="product-price">
+                        Цена: <?= $product['price']; ?> grn.
+                    </div>
+                    <div class="product-to-cart">
+                        <a href="/cart/add/<?= $product['id']; ?>">В корзину</a>
+                    </div>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -39,26 +43,24 @@
                         <div class="tab-pane fade show active" id="home" role="tabpanel"
                              aria-labelledby="home-tab">
 
-                            <form>
+
+                        <?php if (!empty($user_auth)) : ?>
+                             <form method="post" action="">
                                 <div class="form-group">
-                                    <label for="exampleInputName">Name</label>
-                                    <input type="email" class="form-control" id="exampleInputName"
-                                           placeholder="Enter email">
+                                    <label for="exampleInputName">Ваше имя:</label>
+                                    <input type="text" name="name" class="form-control" id="exampleInputName" value="">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                           placeholder="Enter email">
+                                    <label for="exampleFormControlTextarea1">Ваш комментарий:</label>
+                                    <textarea name="comment" class="form-control" id="exampleFormControlTextarea1"
+                                    rows="3"></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Example
-                                        textarea</label>
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                                  rows="3"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" name="submit_comment" class="btn btn-primary">Отправить</button>
                             </form>
+                         <?php else : ?> 
+                            <p class="text-danger"> Только зарегистрированные пользователи могут оставлять отзывы! </p>  
+                         <?php endif ; ?>   
 
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel"
@@ -74,5 +76,28 @@
                             placeat similique suscipit! Ducimus, illum.
                         </div>
                     </div>
+
+
+                    <div class="list-comment">
+
+                    <?php if (!empty($get_comments)) : ?>
+                        
+                        <?php foreach ($get_comments as $comment) : ?>
+                        <div class="block-comment-text">
+                            <p><b>Имя</b>: <span class="text-primary"><?= $comment['author_name']; ?></span> <b>Дата</b>: <span class="text-primary"><?= $comment['created_at']; ?></span></p>
+                            <p><?= $comment['text']; ?></p>
+                        </div>
+                        <?php endforeach ; ?>
+
+                    <?php else : ?>  
+
+                    <h4>Нет отзывов о данном товаре!</h4> 
+
+                    <?php endif ;?>
+
+                    </div>
+
+
                 </div>
             </div>
+

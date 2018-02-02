@@ -10,7 +10,7 @@ class Order extends Model
     {
         $product_cart = json_encode($product_cart);
 
-        return $this->findBySql("INSERT INTO orders (`user_name`, `user_phone`, `user_comment`, `user_id`, `products`) VALUES ('$name', '$phone', '$comment', '$user_id', '$product_cart')");
+        return $this->findBySql(" INSERT INTO orders (`user_name`, `user_phone`, `user_comment`, `user_id`, `products`) VALUES ('$name', '$phone', '$comment', '$user_id', '$product_cart')");
     }
 }
 

@@ -3,7 +3,7 @@
 
         <?php foreach ($posts as $post) : ?>
     <div class="card">
-        <img src="" alt="Картинка">
+        <img src="/public/images/<?= $post['image'];?>" alt="Картинка">
         <div class="card-body">
             <h4 class="card-title"><?= $post['title']; ?></h4>
             <p class="card-text"> <?= $post['mini-desc']; ?></p>

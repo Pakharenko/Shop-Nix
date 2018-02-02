@@ -4,7 +4,7 @@
 
     <?php foreach ($post as $item) : ?>
         <div class="card">
-            <img src="" alt="Картинка">
+            <img src="/public/images/<?= $item['image'];?>" alt="Картинка">
             <div class="card-body">
                 <h4 class="card-title"><?= $item['title']; ?></h4>
                 <p class="card-text"> <?= $item['description']; ?></p>
