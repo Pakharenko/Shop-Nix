@@ -30,9 +30,18 @@ class Router
                         $route[$k] = $v;
                     }
                 }
+
                 if (!isset($route['action'])) {
                     $route['action'] = 'index';
                 }
+
+                // For Admin
+                if (!isset($route['prefix'])) {
+                    $route['prefix'] = '';
+                } else {
+                    $route['prefix'] .= '\\';
+                }
+
                 $route['controller'] = self::upperCamelCase($route['controller']);
                 self::$route = $route; // на выходе получаем Controller и Action
                 return true;
@@ -45,7 +54,7 @@ class Router
     {
         $url = self::removeQueryString($url);
         if (self::matchRoute($url)) {
-            $controller = 'app\controllers\\' . self::$route['controller'] . 'Controller';
+            $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
             if (class_exists($controller)) {
                 $contrObj = new $controller(self::$route); // объект контроллера
                 // получили action  постфиксом action для методов

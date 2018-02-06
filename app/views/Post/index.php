@@ -6,7 +6,7 @@
         <img src="/public/images/<?= $post['image'];?>" alt="Картинка">
         <div class="card-body">
             <h4 class="card-title"><?= $post['title']; ?></h4>
-            <p class="card-text"> <?= $post['mini-desc']; ?></p>
+            <p class="card-text"> <?= $post['mini_desc']; ?></p>
             <span><i class="fa fa-clock-o" aria-hidden="true"></i>
                 <?= $post['date']; ?> </span>
             <span> <i class="fa fa-user" aria-hidden="true"></i>

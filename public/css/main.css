@@ -165,10 +165,9 @@ header nav {
     transition: .3s;
 }
 .card img {
-    margin: 10px 0;
     width: 100%;
     height: auto;
-    text-align: center;
+    margin: 10px auto;
 }
 .block-products {
     margin-bottom: 20px;
@@ -344,6 +343,11 @@ header nav {
     line-height: 1;
     font-size: 17px;
     color: #000;
+}
+
+.table-admin-image img {
+    width: 25px;
+    height: auto;
 }
 
 

@@ -58,6 +58,7 @@ class UserController extends AppController
 
             if ($errors == false) {
                 $model->registerUser($name, $email, $password);
+                header("location: /user/login");
             }
         }
 

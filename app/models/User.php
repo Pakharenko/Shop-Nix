@@ -7,83 +7,102 @@ use fw\core\base\Model;
 
 class User extends Model
 {
-    public function registerUser($name, $email, $password)
-    {
-      $this->findBySql(" INSERT INTO users (`name`, `email`, `password`) VALUES ('$name', '$email', '$password') ");
+ public function registerUser($name, $email, $password)
+{
+ return  $this->findBySql(" INSERT INTO users (`name`, `email`, `password`) VALUES ('$name', '$email', '$password') ");
+}
 
-      return header("location: /user/register");
+  public function getAllUsers()
+  {
+    return $this->findBySql(" SELECT * FROM users");  
+}
+
+public function userData($email, $password)
+{
+    return $this->findBySql(" SELECT * FROM users WHERE email = '$email' AND password = '$password' ");
+}
+
+public function editUser($id, $name, $email, $password)
+{
+    return $this->findBySql("UPDATE users SET `name` = '$name', `email` = '$email', password = '$password' WHERE id = '$id'");
+}
+
+public static function auth($userId)
+{
+    $_SESSION['user'] = $userId;
+}
+
+public static function isAuth()
+{
+    if (isset($_SESSION['user'])) {
+        return $_SESSION['user'];
     }
+    return false;
+}
 
-    public function userData($email, $password)
-    {
-        return $this->findBySql(" SELECT * FROM users WHERE email = '$email' AND password = '$password' ");
+public static function logout()
+{
+    unset($_SESSION['email']);
+    Session::destroy();
+    header("location: /");
+}
+
+
+public function getOneUser($id)
+{
+    return $this->findBySql(" SELECT * FROM users WHERE id = $id");  
+}
+
+public function deleteUser($id)
+{
+    return $this->findBySql("DELETE FROM users WHERE id = $id");
+}
+
+public function editUserInAdmin($id, $edit_user)
+{
+    return $this->findBySql(" UPDATE users SET name = '$edit_user[name]', email = '$edit_user[email]', password = '$edit_user[password]', is_admin = '$edit_user[is_admin]' WHERE id = '$id' ");
+}
+
+
+public static function validateName($name)
+{
+    if (strlen($name) >= 2) {
+        return true;
     }
+    return false;
+}
 
-    public function editUser($id, $name, $email, $password)
-    {
-        return $this->findBySql("UPDATE users SET `name` = '$name', `email` = '$email', password = '$password' WHERE id = '$id'");
+public static function validateEmail($email)
+{
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return true;
     }
+    return false;
+}
 
-    public static function auth($userId)
-    {
-        $_SESSION['user'] = $userId;
+public static function validatePassword($password)
+{
+    if (strlen($password) >= 4) {
+        return true;
     }
+    return false;
+}
 
-    public static function isAuth()
-    {
-        if (isset($_SESSION['user'])) {
-            return $_SESSION['user'];
-        }
-        return false;
+public static function validatePhone($phone)
+{
+    if (strlen($phone) >= 10) {
+        return true;
     }
+    return false;
+}
 
-    public static function logout()
-    {
-        unset($_SESSION['email']);
-        Session::destroy();
-        header("location: /");
+public static function validateComment($comment)
+{
+    if (strlen($comment) >= 4) {
+        return true;
     }
-
-
-    public static function validateName($name)
-    {
-        if (strlen($name) >= 2) {
-            return true;
-        }
-            return false;
-    }
-
-    public static function validateEmail($email)
-    {
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return true;
-        }
-        return false;
-    }
-
-    public static function validatePassword($password)
-    {
-        if (strlen($password) >= 4) {
-            return true;
-        }
-        return false;
-    }
-
-    public static function validatePhone($phone)
-    {
-        if (strlen($phone) >= 10) {
-            return true;
-        }
-        return false;
-    }
-
-    public static function validateComment($comment)
-    {
-        if (strlen($comment) >= 4) {
-            return true;
-        }
-        return false;
-    }
+    return false;
+}
 
 
 

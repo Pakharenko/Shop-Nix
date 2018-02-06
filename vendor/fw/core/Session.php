@@ -4,14 +4,14 @@ namespace fw\core;
 
 class Session
 {
+    public static function start()
+    {
+        return session_start();
+    }
+
     public static function sessionSavePath($path)
     {
         return session_save_path($path);
-    }
-    
-    public static function start()
-    {
-         session_start();
     }
 
     public static function getName($session_name)
@@ -28,5 +28,5 @@ class Session
     {
         return session_destroy();
     }
-    
+
 }

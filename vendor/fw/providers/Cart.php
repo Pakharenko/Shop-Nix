@@ -67,7 +67,7 @@ class Cart
 
         if ($products_cart) {
             $product_id = array_keys($products_cart);
-            $products = $model->getProdustId($product_id);
+            $products = $model->getProductId($product_id);
             $total_products_price = Cart::getTotalPrice($products);
             return $total_products_price;
         }

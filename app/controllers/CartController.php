@@ -17,7 +17,7 @@ class CartController extends AppController
 
         if ($products_cart) {
             $product_id = array_keys($products_cart);
-            $products = $model->getProdustId($product_id);
+            $products = $model->getProductId($product_id);
             $total_products_price = Cart::getTotalPrice($products);
         }
 
@@ -50,7 +50,7 @@ class CartController extends AppController
 
         if ($products_cart) {
             $product_id = array_keys($products_cart);
-            $products = $model_cart->getProdustId($product_id);
+            $products = $model_cart->getProductId($product_id);
             $total_products_price = Cart::getTotalPrice($products);
         }
 

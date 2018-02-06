@@ -23,7 +23,7 @@ class Swift_StreamFilters_ByteArrayReplacementFilter implements Swift_StreamFilt
     /** The replacement(s) to make */
     private $replace;
 
-    /** The Index for searching */
+    /** The Admin for searching */
     private $index;
 
     /** The Search Tree */

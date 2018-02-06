@@ -161,7 +161,7 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
                             <div class="owl-carousel">
                                 <?php foreach ($cat->getPopularProducts() as $product) : ?>
                                     <div class="card">
-                                        <img class="card-img-top" src="/public/images/apple.jpg" alt="Card image cap">
+                                        <img class="card-img-top" src="/public/images/<?= $product['image']?>" alt="Card image cap">
                                         <div class="card-body">
                                             <h5 class="card-title"><?= $product['name']; ?></h5>
                                             <p class="card-text"><?= $product['tiny_desc']; ?></p>

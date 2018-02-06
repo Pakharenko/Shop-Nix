@@ -11,7 +11,7 @@ abstract class Controller
     public $vars = []; //определение переменных в шаблонах(видах) сайта
     public function __construct($route)
     {
-        Session::start();
+        @Session::start();
         $this->route = $route;
         $this->view = $route['action'];
     }
