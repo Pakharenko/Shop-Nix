@@ -34,12 +34,15 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
     <interpreters>
       <interpreter home="$PROJECT_DIR$/../../lib/php/modules/7.0" id="c36f14c7-4218-4f86-bdfb-9233067ffc6e" name="php7" debugger_id="php.debugger.XDebug" />
-      <interpreter home="$USER_HOME$/.PhpStorm2017.3/system/plugins/idea-php-latest-plugin/php-v7.2.1/php.sh" id="f87e51cf-af5f-4ee2-adec-4111c424e55c" name="PHP latest" debugger_id="php.debugger.XDebug" />
+      <interpreter home="$USER_HOME$/.PhpStorm2017.3/system/plugins/idea-php-latest-plugin/php-v7.2.2/php.sh" id="15e38611-fb8a-4739-936f-e8b75bcf082e" name="PHP latest" debugger_id="php.debugger.XDebug" />
     </interpreters>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

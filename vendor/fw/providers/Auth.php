@@ -21,9 +21,12 @@ class Auth
 
     public static function getAdminAuth()
     {
-        Session::start();
-        foreach (User::isAuth() as $user) {
-            $auth_admin = $user['is_admin'];
+Session::start();
+        $auth_admin = false;
+        if (!empty(User::isAuth())) {
+            foreach (User::isAuth() as $user) {
+                $auth_admin = $user['is_admin'];
+            }
         }
 
        return intval($auth_admin);
