@@ -18,6 +18,9 @@ h1 {
     font-weight: 600;
     margin-bottom: 20px;
 }
+header .navbar {
+    box-shadow: 0 0 10px #555;
+}
 #cart-count {
     background: Tomato;
     font-size: 10px;
