@@ -3,6 +3,7 @@
 use fw\core\Router;
 
 // Clients routes
+Router::add('^catalog/(?P<alias>[0-9]+)$', ['controller' => 'Catalog', 'action' => 'filter']);
 Router::add('^catalog/page-(?P<alias>[0-9]+)$', ['controller' => 'Catalog', 'action' => 'index']);
 Router::add('^catalog/(?P<alias>[0-9]+)$', ['controller' => 'Catalog', 'action' => 'category']);
 Router::add('^product/(?P<alias>[0-9]+)$', ['controller' => 'Product', 'action' => 'index']);

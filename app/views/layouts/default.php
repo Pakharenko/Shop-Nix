@@ -137,14 +137,15 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
 
                         <h3>Фильтры</h3>
                         <div class="sort-sidebar-goods">
-                            <form action="/catalog" method="post">
+                            <form action="/catalog/filter" method="post">
                                 <p>Сортировать товар:</p>
                                 <div class="form-group">
                                     <select name="filter-group" class="form-control form-control-sm">
-                                        <option value="expencive">сначала дорогие</option>
-                                        <option value="inexpencive">сначала недорогие</option>
-                                        <option value="a_z">от A до Z</option>
-                                        <option value="z_a">от Z до A</option>
+                                        <option value="price DESC">сначала дорогие</option>
+                                        <option value="price ASC">начала недорогие</option>
+                                        <option value="name ASC">от A до Z</option>
+                                        <option value="name DESC">от Z до A</option>
+
                                     </select>
                                 </div>
                                 <div class="form-group">
