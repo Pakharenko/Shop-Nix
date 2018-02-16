@@ -16,8 +16,11 @@ class PostController extends AppController
     public function viewAction()
     {
         $model = new Post();
-        $id = $this->route['alias'];
+        $id = intval($this->route['alias']);
         $post = $model->getOnePost($id);
+        if (!$post) {
+            abort();
+        }
         $this->set(['post' => $post]);
     }
 

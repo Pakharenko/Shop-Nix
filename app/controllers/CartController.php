@@ -102,7 +102,7 @@ class CartController extends AppController
 
         $this->set([
             'name_user' => $name_user,
-            'errors' => $errors,
+            'Error' => $errors,
             'total_products_price' => $total_products_price,
         ]);
     }

@@ -10,7 +10,7 @@ class ContactController extends AppController
     public function indexAction()
     {
         $model = new Contact();
-        $this->set(['contacts' => $model->getContacts()]);
+        $this->set(['contacts' => $model->findAll()]);
     }
 
 }

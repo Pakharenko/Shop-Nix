@@ -10,7 +10,7 @@ class Order extends Model
 	{
 		$product_cart = json_encode($product_cart);
 
-		return $this->findBySql(" INSERT INTO orders (`user_name`, `user_phone`, `user_comment`, `user_id`, `products`) VALUES ('$name', '$phone', '$comment', '$user_id', '$product_cart')");
+		return $this->findBySql(" INSERT INTO orders (`user_name`, `user_phone`, `user_comment`, `user_id`, `products`) VALUES (?, ?, ?, ?, ?)", [$name, $phone, $comment, $user_id, $product_cart]);
 	}
 
 	public function getAllOrders()
@@ -26,7 +26,7 @@ class Order extends Model
 
 	public function getViewOrder($id)
 	{
-		return $this->findBySql("SELECT * FROM orders WHERE id = $id");
+		return $this->findBySql("SELECT * FROM orders WHERE id = ?", [$id]);
 	}
 
 
@@ -38,7 +38,7 @@ class Order extends Model
 
 	public function deleteOrder($id)
 	{
-		return $this->findBySql("DELETE FROM orders WHERE id = $id");
+		return $this->findBySql("DELETE FROM orders WHERE id = ?", [$id]);
 	}
 
 }

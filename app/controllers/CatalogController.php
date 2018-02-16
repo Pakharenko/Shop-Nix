@@ -12,21 +12,13 @@ class CatalogController extends AppController
     {
         $model = new Product();
         $page = 1;
-        $product_all = $model->getAllProducts($page);
-
         if (isset($this->route['alias'])) {
             $page = $this->route['alias'];
         }
-
-        $limit = Product::VIEW_PAGE_LIST;
-        $total = $model->getTotalCountProduct();
-
-        $pagination = new Pagination($total, $page, $limit, 'page-');
-
-        $this->set(compact('product_all', 'pagination'));
-
+        $product_all = $model->getAllProducts($page);
+        $pagination = new Pagination($model->getTotalCountProduct(), $page, Product::VIEW_PAGE_LIST, 'page-');
+        $this->set(compact('product_all','pagination'));
     }
-
 
     public function categoryAction()
     {

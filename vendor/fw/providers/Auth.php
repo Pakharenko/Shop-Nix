@@ -21,7 +21,7 @@ class Auth
 
     public static function getAdminAuth()
     {
-Session::start();
+        Session::start();
         $auth_admin = false;
         if (!empty(User::isAuth())) {
             foreach (User::isAuth() as $user) {
@@ -29,7 +29,25 @@ Session::start();
             }
         }
 
-       return intval($auth_admin);
+        return intval($auth_admin);
+    }
+
+    public static function getNameUser()
+    {
+        $name = false;
+            foreach (User::isAuth() as $nameUser) {
+                $name = $nameUser['name'];
+            }
+            return $name;
+    }
+
+    public static function getAllUserData()
+    {
+        $name = [];
+        foreach (User::isAuth() as $allData) {
+            $name = $allData;
+        }
+        return $name;
     }
 
 

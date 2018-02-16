@@ -18,6 +18,9 @@ class ProductController extends AppController
         $user_auth = $model_user->isAuth();
 
         $products = $model->findOne($this->route['alias']);
+        if (!$products) {
+            abort();
+        }
 
         $product_id = $this->route['alias'];
 

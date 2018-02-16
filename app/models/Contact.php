@@ -6,8 +6,5 @@ use fw\core\base\Model;
 
 class Contact extends Model
 {
-    public function getContacts()
-    {
-        return $this->findBySql("SELECT * FROM contacts");
-    }
+    protected $table = 'contacts';
 }

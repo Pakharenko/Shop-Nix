@@ -1,12 +1,5 @@
 <h1>Редактировать данные</h1>
 
-<?php if (isset($errors) && is_array($errors)) : ?>
-    <?php foreach ($errors as $error) : ?>
-        <p class="text-danger"> - <?php echo $error; ?></p>
-    <?php endforeach; ?>
-<?php endif; ?>
-
-
 <div class="container">
     <div class="row">
 
@@ -26,7 +19,7 @@
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1"
                            value="<?= $name_user_edit['password']; ?>">
                 </div>
-                <input type="submit" name="edit_user" class="btn btn-primary" value="Редактировать">
+                <input type="submit" name="submit" class="btn btn-primary" value="Редактировать">
             </form>
         </div>
 

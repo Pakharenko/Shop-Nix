@@ -65,7 +65,7 @@ class Product extends Model
     }
 
     // --- Filters ---
-    public function getFilterSelected( $sort)
+    public function getFilterSelected($sort)
     {
         return $this->findBySql("SELECT * FROM products ORDER BY  $sort ");
     }

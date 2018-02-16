@@ -2,6 +2,7 @@
 namespace fw\core\base;
 
 use fw\core\Session;
+use fw\core\ErrorHandler;
 
 abstract class Controller
 {
@@ -14,6 +15,7 @@ abstract class Controller
         @Session::start();
         $this->route = $route;
         $this->view = $route['action'];
+
     }
     public function getView()
     {

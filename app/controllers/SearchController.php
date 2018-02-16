@@ -3,13 +3,14 @@
 namespace app\controllers;
 
 use app\models\Product;
+use fw\providers\Request;
 
 class SearchController extends AppController
 {
     public function indexAction()
     {
         $model = new Product();
-        if (isset($_POST['search'])) {
+        if (Request::isPost()) {
             $str = $_POST['text'];
             $search = $model->searchProduct($str);
         }

@@ -3,67 +3,41 @@
 namespace app\controllers;
 
 use app\models\User;
+use fw\providers\Request;
 
 class UserController extends AppController
 {
     public function loginAction()
     {
         $model = new User();
-        $email = false;
-        $password = false;
-
-        if (isset($_POST['submit'])) {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-
-            $errors = false;
-
-            $userId = $model->userData($email, $password);
-
-            if ($userId == false) {
-                $errors[] = 'Неправильный логин или пароль';
-            } else {
+        $data = $_POST;
+        if (Request::isPost()) {
+            $model->load($data);
+            $userId = $model->userData($data);
+            if ($model->validate($data)) {
                 User::auth($userId);
-                header("Location: /");
+                Request::redirect('/');
+            } else {
+                $_SESSION['error'] = 'Логин/пароль введены неверно';
             }
         }
-
-        $this->set(compact('email', 'password', 'errors'));
 
     }
 
     public function registerAction()
     {
-        $name = false;
-        $email = false;
-        $password = false;
-
-        $model = new User();
-
-        if (isset($_POST['submit'])) {
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-
-            $errors = false;
-            if (!User::validateName($name)) {
-                $errors[] = 'Имя не должно быть короче 2-х символов';
+        $user = new User();
+        $data = $_POST;
+        if (Request::isPost()) {
+            $user->load($data);
+            if ($user->validate($data)) {
+                $user->registerUser($data);
+                $_SESSION['success'] = 'Вы успешно зарегистрировались';
+            } else {
+                $user->getErrors();
             }
-            if (!User::validateEmail($email)) {
-                $errors[] = 'Неправильный email';
-            }
-            if (!User::validatePassword($password)) {
-                $errors[] = 'Пароль не должен быть короче 4-ох символов';
-            }
-
-            if ($errors == false) {
-                $model->registerUser($name, $email, $password);
-                header("location: /user/login");
-            }
+            Request::redirect();
         }
-
-          $this->set(compact('name', 'email', 'password', 'errors'));
-
     }
 
     public function logoutAction()

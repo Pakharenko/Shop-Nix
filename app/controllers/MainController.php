@@ -3,7 +3,6 @@
 namespace app\controllers;
 
 use app\models\Product;
-use fw\providers\Breadcrumbs;
 
 class MainController extends AppController
 {

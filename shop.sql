@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 06 2018 г., 18:14
+-- Время создания: Фев 16 2018 г., 12:06
 -- Версия сервера: 5.7.13
 -- Версия PHP: 7.0.8
 
@@ -30,21 +30,24 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(10) unsigned NOT NULL,
   `name` varchar(50) NOT NULL,
   `parent_id` int(11) DEFAULT '0',
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
 -- Дамп данных таблицы `categories`
 --
 
 INSERT INTO `categories` (`id`, `name`, `parent_id`, `created_at`, `updated_at`) VALUES
-(1, 'Lenovo', NULL, '2018-01-16 19:13:05', NULL),
-(2, 'Nokia', NULL, '2018-01-16 19:13:05', NULL),
-(4, 'Xiaomi', NULL, '2018-01-16 19:13:05', NULL),
-(5, 'Apple', NULL, '2018-01-16 19:13:05', NULL),
-(6, 'Nomi', NULL, '2018-01-16 19:13:05', NULL),
-(8, 'LG', 0, '2018-02-05 12:22:07', NULL);
+(1, 'Lenovo', 0, '2018-01-16 19:13:05', '2018-02-14 09:03:59'),
+(2, 'Nokia', 0, '2018-01-16 19:13:05', '2018-02-14 09:04:02'),
+(4, 'Xiaomi', 0, '2018-01-16 19:13:05', '2018-02-14 09:04:05'),
+(5, 'Apple', 0, '2018-01-16 19:13:05', '2018-02-14 09:04:07'),
+(6, 'Nomi', 0, '2018-01-16 19:13:05', '2018-02-14 09:04:04'),
+(11, 'Smartfones', 2, '2018-02-13 18:52:23', '2018-02-14 08:53:52'),
+(12, 'Knopka', 2, '2018-02-13 18:52:23', '2018-02-14 08:53:56'),
+(13, 'Sony', 0, '2018-02-14 09:04:22', NULL),
+(14, 'LG', 0, '2018-02-14 09:04:22', '2018-02-14 09:55:02');
 
 -- --------------------------------------------------------
 
@@ -58,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `text` text NOT NULL,
   `product_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
@@ -102,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `products` varchar(255) CHARACTER SET utf8 NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
@@ -111,7 +114,6 @@ CREATE TABLE IF NOT EXISTS `orders` (
 
 INSERT INTO `orders` (`id`, `user_name`, `user_phone`, `user_comment`, `user_id`, `products`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'Ольга Пахаренко', '+380920829505', 'fhhjerer', 0, '{"9":1}', 0, '2018-02-01 13:46:23', NULL),
-(2, 'Pro-dev', '+380920829505', 'tgrfgfgf', 4, '{"6":1}', 1, '2018-02-01 13:47:06', NULL),
 (4, 'Pro-web-master', '+7(343)434-33-33-1985', 'dfdflkbdhfdkn fkldhdfkgh dfkhgfjkngvjkdfhgkdfhgkjdfnvbjkvlxdfjlkvjndfvdfbfgh', 0, '{"21":1}', 1, '2018-02-05 14:47:43', NULL),
 (5, 'lg', '454657567678687', 'ggghgh', 0, '{"25":1,"24":1}', 1, '2018-02-05 18:33:17', NULL);
 
@@ -129,8 +131,8 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `mini_desc` tinytext NOT NULL,
   `description` text NOT NULL,
   `date` date NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
@@ -160,8 +162,8 @@ CREATE TABLE IF NOT EXISTS `products` (
   `is_new` int(11) NOT NULL DEFAULT '0',
   `is_hits` int(11) NOT NULL DEFAULT '0',
   `is_popular` tinyint(1) NOT NULL DEFAULT '0',
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `image` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
 
@@ -178,12 +180,12 @@ INSERT INTO `products` (`id`, `category_id`, `name`, `brand`, `price`, `tiny_des
 (13, 2, 'Nokia T1000', 'Nokia', '122.99', 'Описание товара', 'Полное описание', 0, 1, 0, '2018-02-02 19:24:01', NULL, '1580562433.jpg'),
 (14, 3, 'Samsung', 'Samsung', '5000.55', 'Описание товара', 'Полное описание', 1, 0, 1, '2018-02-02 19:34:39', NULL, '30023430b.jpg'),
 (15, 2, 'Samsung J3(2017)', 'Samsung', '2999.99', 'Описание товара', 'Полное описание товара', 1, 1, 1, '2018-02-04 08:51:44', NULL, 'lb-galaxy-j1-2016-j120h-sm-j120hzddmid-frontgold-thumb-61587717.jpg'),
-(17, 7, 'lg', 'lg', '777.00', ' Короткое описание', ' Короткое описание', 1, 0, 1, '2018-02-04 10:21:19', NULL, 'gold_9_3-1428x1228.jpg'),
-(18, 7, 'lg', 'lg', '777.00', 'lglglgl', 'lgllgllggl', 1, 0, 1, '2018-02-04 10:22:33', NULL, 'gold_9_3-1428x1228.jpg'),
-(19, 7, 'lg', 'lg', '777.00', 'lglglgl', 'lgllgllggl', 1, 0, 1, '2018-02-04 10:22:59', NULL, 'gold_9_3-1428x1228.jpg'),
+(17, 13, 'lg', 'lg', '777.00', ' Короткое описание', ' Короткое описание', 1, 0, 1, '2018-02-04 10:21:19', '2018-02-14 10:22:56', 'gold_9_3-1428x1228.jpg'),
+(18, 13, 'lg', 'lg', '777.00', 'lglglgl', 'lgllgllggl', 1, 0, 1, '2018-02-04 10:22:33', '2018-02-14 10:23:02', 'gold_9_3-1428x1228.jpg'),
+(19, 14, 'lg', 'lg', '777.00', 'lglglgl', 'lgllgllggl', 1, 0, 1, '2018-02-04 10:22:59', '2018-02-14 10:23:08', 'gold_9_3-1428x1228.jpg'),
 (21, 1, 'Sony', 'Sony', '7000.99', 'Sony', 'Sony', 1, 1, 1, '2018-02-04 11:34:36', NULL, '30023430b.jpg'),
-(22, 3, 'Samsung 777777777', 'Samsung', '55.99', 'Короткое описание товара', 'Полное описание товара', 0, 1, 0, '2018-02-04 15:01:59', NULL, ''),
-(23, 3, 'Samsung ', 'Samsung', '55.99', 'Короткое описание товара', 'Полное описание товара', 0, 1, 0, '2018-02-04 15:02:34', NULL, ''),
+(22, 1, 'Samsung 777777777', 'Samsung', '55.99', 'Короткое описание товара', 'Полное описание товара', 0, 1, 0, '2018-02-10 05:56:36', NULL, 'noimage.jpg'),
+(23, 1, 'Samsung ', 'Samsung', '55.99', 'Короткое описание товара', 'Полное описание товара', 0, 1, 0, '2018-02-10 05:56:51', NULL, 'noimage.jpg'),
 (24, 3, 'Pakharenko', 'Samsung', '1985.00', 'Короткое описание товара', 'Полное описание товара', 1, 1, 0, '2018-02-04 15:03:49', NULL, 'lb-galaxy-j1-2016-j120h-sm-j120hzddmid-frontgold-thumb-61587717.jpg'),
 (25, 3, 'Pro-web-master', 'Samsung', '1985.00', 'Короткое описание товара', 'Полное описание товара', 1, 1, 0, '2018-02-04 17:55:33', NULL, '1517014342-71096779-78665-0811-516350.jpg'),
 (28, 1, 'Best', 'Best', '2.45', 'rrrrr', 'Полное описание', 1, 1, 1, '2018-02-06 09:37:53', NULL, '97_1500x_1500517993.jpg');
@@ -198,18 +200,19 @@ CREATE TABLE IF NOT EXISTS `subscribes` (
   `id` int(3) unsigned NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `subscribes`
 --
 
-INSERT INTO `subscribes` (`id`, `name`, `email`, `created_at`) VALUES
-(1, 'Ольга Пахаренко', 'paharenko1985@mail.ru', '2018-02-01 18:37:24'),
-(2, 'Ольга Пахаренко', 'paharenko1985@mail.ru', '2018-02-01 18:38:14'),
-(3, 'Ольга Пахаренко', 'paharenko1985@mail.ru', '2018-02-01 18:38:35'),
-(4, 'Pakahrenko', 'nix@mail.ru', '2018-02-01 18:38:52');
+INSERT INTO `subscribes` (`id`, `name`, `email`, `created_at`, `updated_at`) VALUES
+(1, 'Ольга Пахаренко', 'paharenko1985@mail.ru', '2018-02-01 18:37:24', '0000-00-00 00:00:00'),
+(2, 'Ольга Пахаренко', 'paharenko1985@mail.ru', '2018-02-01 18:38:14', '0000-00-00 00:00:00'),
+(3, 'Ольга Пахаренко', 'paharenko1985@mail.ru', '2018-02-01 18:38:35', '0000-00-00 00:00:00'),
+(4, 'Pakahrenko', 'nix@mail.ru', '2018-02-01 18:38:52', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -223,17 +226,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(50) CHARACTER SET utf8 NOT NULL,
   `password` varchar(100) NOT NULL,
   `is_admin` int(1) NOT NULL DEFAULT '0',
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
 
 --
 -- Дамп данных таблицы `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `is_admin`, `created_at`, `updated_at`) VALUES
-(4, 'Pro-dev-master', 'nix@mail.ru', '123456', 1, '2018-02-06 13:07:27', NULL),
-(6, 'Евгений', 'paharenko1985@mail.ru', '123456', 0, '2018-02-06 14:04:45', NULL);
+(43, 'Жека Пахаренко 1985', 'paharenko1985@mail.ru', '12111985', 0, '2018-02-13 13:32:34', '2018-02-13 13:33:42'),
+(44, 'Nix', 'nix@mail.ru', '123456', 1, '2018-02-13 13:34:30', '2018-02-15 11:06:25');
 
 --
 -- Индексы сохранённых таблиц
@@ -289,7 +292,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT для таблицы `comments`
 --
@@ -319,7 +322,7 @@ ALTER TABLE `subscribes`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=45;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

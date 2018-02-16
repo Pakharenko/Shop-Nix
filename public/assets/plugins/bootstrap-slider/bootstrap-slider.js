@@ -97,7 +97,7 @@
 
 			// -------------------------- plugin bridge -------------------------- //
 
-			// helper function for logging errors
+			// helper function for logging Error
 			// $.error breaks jQuery chaining
 			var logError = typeof console === 'undefined' ? noop :
 			  function( message ) {

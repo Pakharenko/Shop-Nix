@@ -52,6 +52,7 @@ class Router
     // перенаправляет URL по корректному маршруту. $url - входящий URL
     public static function dispatch($url)
     {
+        new ErrorHandler();
         $url = self::removeQueryString($url);
         if (self::matchRoute($url)) {
             $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
@@ -63,14 +64,13 @@ class Router
                     $contrObj->$action();
                     $contrObj->getView();
                 } else {
-                    echo "<br> Метод <b>$controller::$action</b> не найден";
+                    throw new \Exception("Метод <b>$controller::$action</b> не найден", 404);
                 }
             } else {
-                echo "Контроллер <b> $controller </b> не найден";
+                throw new \Exception("Контроллер <b>$controller</b> не найден", 404);
             }
         } else {
-            http_response_code(404);
-            include '404.html';
+            throw new \Exception("Страница не найдена", 404);
         }
     }
     //Нужный вид контроллера в верхнем регистре

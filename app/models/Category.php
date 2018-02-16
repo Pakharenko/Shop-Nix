@@ -9,13 +9,13 @@ class Category extends Model
 
     public function getCategories()
     {
-        return $this->findBySql("SELECT * FROM categories");
+        return $this->findBySql("SELECT id, name, parent_id FROM categories");
     }
 
 
     public function getCategoryId($id)
     {
-    	return $this->findBySql("SELECT * FROM categories WHERE id = $id");
+    	return $this->findBySql("SELECT * FROM categories WHERE id = ?", [$id]);
     }
 
 
@@ -27,13 +27,13 @@ class Category extends Model
 
     public function editCategory($id, $edit_category)
     {
-        return $this->findBySql(" UPDATE categories SET name = '$edit_category[name]' WHERE id = $id ");
+        return $this->findBySql(" UPDATE categories SET name = '$edit_category[name]' WHERE id = ? ", [$id]);
     }
 
 
     public function deleteCategory($id)
     {
-        return $this->findBySql("DELETE FROM categories WHERE id = $id");
+        return $this->findBySql("DELETE FROM categories WHERE id = ?", [$id]);
     }
 
 }

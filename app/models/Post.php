@@ -13,7 +13,7 @@ class Post extends Model
 
     public function getOnePost($id)
     {
-        return $this->findBySql("SELECT * FROM posts WHERE id = $id");
+        return $this->findBySql("SELECT * FROM posts WHERE id = ?", [$id]);
     }
 
 
@@ -31,7 +31,7 @@ class Post extends Model
 
     public function deletePost($id)
     {
-        return $this->findBySql("DELETE FROM posts WHERE id = $id");
+        return $this->findBySql("DELETE FROM posts WHERE id = ?", [$id]);
     }
 
 }
