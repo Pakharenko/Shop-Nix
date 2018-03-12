@@ -18,9 +18,6 @@ class PostController extends AppController
         $model = new Post();
         $id = intval($this->route['alias']);
         $post = $model->getOnePost($id);
-        if (!$post) {
-            abort();
-        }
         $this->set(['post' => $post]);
     }
 

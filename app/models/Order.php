@@ -6,11 +6,30 @@ use fw\core\base\Model;
 
 class Order extends Model
 {
-	public function saveOrders($user_id, $name, $phone, $comment, $product_cart)
+    public $attributes = [
+        'name' => '',
+        'phone' => '',
+        'comment' => '',
+    ];
+
+    public $rules = [
+        'required' => [
+            ['name'],
+            ['phone'],
+            ['comment'],
+        ],
+        'lengthMin' => [
+            ['comment', 6],
+            ['name', 3],
+            ['phone', 10]
+        ]
+    ];
+
+
+	public function saveOrders($data, $user_id, $product_cart)
 	{
 		$product_cart = json_encode($product_cart);
-
-		return $this->findBySql(" INSERT INTO orders (`user_name`, `user_phone`, `user_comment`, `user_id`, `products`) VALUES (?, ?, ?, ?, ?)", [$name, $phone, $comment, $user_id, $product_cart]);
+		return $this->findBySql(" INSERT INTO orders (`user_name`, `user_phone`, `user_comment`, `user_id`, `products`) VALUES (?, ?, ?, ?, ?)", [$data['name'], $data['phone'], $data['comment'], $user_id, $product_cart]);
 	}
 
 	public function getAllOrders()

@@ -118,3 +118,43 @@
 ==========================
 [2018-02-16 12:01:54] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\libs\functions.php, | Строка: 7
 ==========================
+[2018-02-20 12:02:47] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\Router.php, | Строка: 73
+==========================
+[2018-02-20 12:02:47] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\Router.php, | Строка: 73
+==========================
+[2018-03-08 12:00:22] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\Router.php, | Строка: 73
+==========================
+[2018-03-08 12:00:23] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\Router.php, | Строка: 73
+==========================
+[2018-03-08 12:01:33] Текст ошибки: Метод <b>app\controllers\UserController::adminAction</b> не найден | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\Router.php, | Строка: 67
+==========================
+[2018-03-08 12:01:53] Текст ошибки: Метод <b>app\controllers\UserController::indexAction</b> не найден | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\Router.php, | Строка: 67
+==========================
+[2018-03-10 11:30:33] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\Router.php, | Строка: 73
+==========================
+[2018-03-10 11:30:33] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\Router.php, | Строка: 73
+==========================
+[2018-03-10 11:38:57] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\libs\functions.php, | Строка: 7
+==========================
+[2018-03-10 11:43:13] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\libs\functions.php, | Строка: 7
+==========================
+[2018-03-10 11:52:01] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\libs\functions.php, | Строка: 7
+==========================
+[2018-03-10 11:52:55] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\libs\functions.php, | Строка: 7
+==========================
+[2018-03-10 11:53:12] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\libs\functions.php, | Строка: 7
+==========================
+[2018-03-10 11:55:28] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\libs\functions.php, | Строка: 7
+==========================
+[2018-03-10 12:03:47] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\libs\functions.php, | Строка: 7
+==========================
+[2018-03-10 12:04:37] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\libs\functions.php, | Строка: 7
+==========================
+[2018-03-10 12:10:06] Текст ошибки: Контроллер <b>app\controllers\ErrorController</b> не найден | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\Router.php, | Строка: 70
+==========================
+[2018-03-10 12:19:06] Текст ошибки: Cannot use isset() on the result of an expression (you can use "null !== expression" instead) | Файл: C:\OpenServer\domains\Shop-Nix\app\views\layouts\default.php, | Строка: 213
+==========================
+[2018-03-10 12:23:01] Текст ошибки: Undefined index: alias | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\base\View.php, | Строка: 34
+==========================
+[2018-03-10 12:23:34] Текст ошибки: Undefined index: alias | Файл: C:\OpenServer\domains\Shop-Nix\vendor\fw\core\base\View.php, | Строка: 34
+==========================

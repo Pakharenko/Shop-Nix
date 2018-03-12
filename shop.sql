@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 16 2018 г., 12:06
+-- Время создания: Мар 12 2018 г., 12:43
 -- Версия сервера: 5.7.13
 -- Версия PHP: 7.0.8
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `product_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `comments`
@@ -71,7 +71,8 @@ CREATE TABLE IF NOT EXISTS `comments` (
 INSERT INTO `comments` (`id`, `author_name`, `text`, `product_id`, `created_at`, `updated_at`) VALUES
 (1, 'Ольга Пахаренко', 'dddddddd', 6, '2018-02-01 15:16:24', NULL),
 (2, 'Жека Пахаренко', 'Очень хороший телефон', 9, '2018-02-01 20:11:38', NULL),
-(3, 'Hello World', 'Самый лучший телефон', 12, '2018-02-02 20:11:08', NULL);
+(3, 'Hello World', 'Самый лучший телефон', 12, '2018-02-02 20:11:08', NULL),
+(4, 'Hello World', 'ddddd', 28, '2018-03-10 17:35:56', NULL);
 
 -- --------------------------------------------------------
 
@@ -106,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 --
 -- Дамп данных таблицы `orders`
@@ -115,7 +116,14 @@ CREATE TABLE IF NOT EXISTS `orders` (
 INSERT INTO `orders` (`id`, `user_name`, `user_phone`, `user_comment`, `user_id`, `products`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'Ольга Пахаренко', '+380920829505', 'fhhjerer', 0, '{"9":1}', 0, '2018-02-01 13:46:23', NULL),
 (4, 'Pro-web-master', '+7(343)434-33-33-1985', 'dfdflkbdhfdkn fkldhdfkgh dfkhgfjkngvjkdfhgkdfhgkjdfnvbjkvlxdfjlkvjndfvdfbfgh', 0, '{"21":1}', 1, '2018-02-05 14:47:43', NULL),
-(5, 'lg', '454657567678687', 'ggghgh', 0, '{"25":1,"24":1}', 1, '2018-02-05 18:33:17', NULL);
+(5, 'lg', '454657567678687', 'ggghgh', 0, '{"25":1,"24":1}', 1, '2018-02-05 18:33:17', NULL),
+(17, 'Nix', '+380920829505', 'Пахаренко', 44, 'false', 0, '2018-03-12 08:44:49', NULL),
+(18, 'Nix', '0930829505', 'Пахаренко Евгений', 44, '{"28":1}', 0, '2018-03-12 08:47:54', NULL),
+(19, 'Nix', '+380930829505', 'fgfgfgfgf', 44, '{"28":1}', 0, '2018-03-12 08:49:13', NULL),
+(20, 'Nix', '454657567678687', 'gfgrtftrtrt', 44, '{"28":1}', 1, '2018-03-12 08:55:38', '2018-03-12 08:56:05'),
+(24, 'Nix', '+380920829505', 'uyuyuyuyu', 44, '{"28":1,"25":1,"24":1}', 0, '2018-03-12 09:05:43', NULL),
+(25, 'Nix', '+380920829505', 'iioiioio', 44, '{"25":1}', 0, '2018-03-12 09:08:13', NULL),
+(26, 'Nix', '+380920829505', 'ddfgfgf', 44, '{"28":1}', 0, '2018-03-12 09:39:20', NULL);
 
 -- --------------------------------------------------------
 
@@ -181,7 +189,7 @@ INSERT INTO `products` (`id`, `category_id`, `name`, `brand`, `price`, `tiny_des
 (14, 3, 'Samsung', 'Samsung', '5000.55', 'Описание товара', 'Полное описание', 1, 0, 1, '2018-02-02 19:34:39', NULL, '30023430b.jpg'),
 (15, 2, 'Samsung J3(2017)', 'Samsung', '2999.99', 'Описание товара', 'Полное описание товара', 1, 1, 1, '2018-02-04 08:51:44', NULL, 'lb-galaxy-j1-2016-j120h-sm-j120hzddmid-frontgold-thumb-61587717.jpg'),
 (17, 13, 'lg', 'lg', '777.00', ' Короткое описание', ' Короткое описание', 1, 0, 1, '2018-02-04 10:21:19', '2018-02-14 10:22:56', 'gold_9_3-1428x1228.jpg'),
-(18, 13, 'lg', 'lg', '777.00', 'lglglgl', 'lgllgllggl', 1, 0, 1, '2018-02-04 10:22:33', '2018-02-14 10:23:02', 'gold_9_3-1428x1228.jpg'),
+(18, 13, 'Sony', 'Sony', '777.00', 'lglglgl', 'lgllgllggl', 1, 0, 1, '2018-02-04 10:22:33', '2018-03-10 17:38:55', '30023430b.jpg'),
 (19, 14, 'lg', 'lg', '777.00', 'lglglgl', 'lgllgllggl', 1, 0, 1, '2018-02-04 10:22:59', '2018-02-14 10:23:08', 'gold_9_3-1428x1228.jpg'),
 (21, 1, 'Sony', 'Sony', '7000.99', 'Sony', 'Sony', 1, 1, 1, '2018-02-04 11:34:36', NULL, '30023430b.jpg'),
 (22, 1, 'Samsung 777777777', 'Samsung', '55.99', 'Короткое описание товара', 'Полное описание товара', 0, 1, 0, '2018-02-10 05:56:36', NULL, 'noimage.jpg'),
@@ -202,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `subscribes` (
   `email` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `subscribes`
@@ -212,7 +220,8 @@ INSERT INTO `subscribes` (`id`, `name`, `email`, `created_at`, `updated_at`) VAL
 (1, 'Ольга Пахаренко', 'paharenko1985@mail.ru', '2018-02-01 18:37:24', '0000-00-00 00:00:00'),
 (2, 'Ольга Пахаренко', 'paharenko1985@mail.ru', '2018-02-01 18:38:14', '0000-00-00 00:00:00'),
 (3, 'Ольга Пахаренко', 'paharenko1985@mail.ru', '2018-02-01 18:38:35', '0000-00-00 00:00:00'),
-(4, 'Pakahrenko', 'nix@mail.ru', '2018-02-01 18:38:52', '0000-00-00 00:00:00');
+(4, 'Pakahrenko', 'nix@mail.ru', '2018-02-01 18:38:52', '0000-00-00 00:00:00'),
+(5, '', '', '2018-03-10 11:33:41', NULL);
 
 -- --------------------------------------------------------
 
@@ -297,12 +306,12 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT для таблицы `posts`
 --
@@ -317,7 +326,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT для таблицы `subscribes`
 --
 ALTER TABLE `subscribes`
-  MODIFY `id` int(3) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(3) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --

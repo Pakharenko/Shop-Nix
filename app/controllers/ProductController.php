@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\Product;
 use app\models\User;
 use app\models\Comment;
+use fw\providers\Request;
 
 class ProductController extends AppController
 {
@@ -16,19 +17,12 @@ class ProductController extends AppController
         $model_user = new User();
 
         $user_auth = $model_user->isAuth();
-
-        $products = $model->findOne($this->route['alias']);
-        if (!$products) {
-            abort();
-        }
-
         $product_id = $this->route['alias'];
+        $products = $model->findOne($product_id);
 
-        if (isset($_POST['submit_comment'])) {
-
+        if (Request::isPost()) {
         	$name = $_POST['name'];
         	$comment = $_POST['comment'];
-
         	$model_comment->setCommentUserProduct($comment, $name, $product_id);
         } 
 

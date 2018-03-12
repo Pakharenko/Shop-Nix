@@ -14,6 +14,6 @@ class SearchController extends AppController
             $str = $_POST['text'];
             $search = $model->searchProduct($str);
         }
-      $this->set(['search' => $search]);
+      $this->set(['search' => $search, 'search_text' => $str]);
     }
 }

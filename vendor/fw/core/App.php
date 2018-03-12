@@ -6,7 +6,6 @@ use fw\core\Registry;
 use fw\core\ErrorHandler;
 use fw\core\Session;
 
-
 class App
 {
     

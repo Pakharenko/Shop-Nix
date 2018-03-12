@@ -6,6 +6,7 @@ use app\models\Order;
 use fw\providers\Cart;
 use app\models\Product;
 use app\models\User;
+use fw\providers\Request;
 
 class CartController extends AppController
 {
@@ -27,11 +28,12 @@ class CartController extends AppController
     public function addAction()
     {
         Cart::addProduct($this->route['alias']);
+        Cart::totalProductsCart();
         $ref = $_SERVER['HTTP_REFERER'];
-        header("location: $ref");
+        Request::redirect($ref);
     }
 
-    public function actionAddAjax()
+    public function ajaxAction()
     {
         echo Cart::addProduct($this->route['alias']);
         return true;
@@ -46,25 +48,15 @@ class CartController extends AppController
     public function ordersAction()
     {
         $model_cart = new Product();
+        $model = new Order();
         $products_cart = Cart::getProducts();
+        $data = $_POST;
 
         if ($products_cart) {
             $product_id = array_keys($products_cart);
             $products = $model_cart->getProductId($product_id);
             $total_products_price = Cart::getTotalPrice($products);
         }
-
-
-        $errors = false;
-        $products_cart = Cart::getProducts();
-        $model = new Order();
-
-        if (empty($products_cart)) {
-            header("location: /");
-        }
-
-
-        $name_user = false;
 
         if (User::isAuth()) {
             foreach (User::isAuth() as $user) {
@@ -76,33 +68,22 @@ class CartController extends AppController
             $name_user = false;
         }
 
-        if (isset($_POST['submit'])) {
-            
-            $name = $_POST['name'];
-            $phone = $_POST['phone'];
-            $comment = $_POST['comment'];
-
-            if (!User::validateName($name)) {
-                $errors[] = 'Имя не должно быть короче 2-х символов';
-            }
-            if (!User::validatePhone($phone)) {
-                $errors[] = 'Неправильный номер';
-            }
-            if (!User::validateComment($comment)) {
-                $errors[] = 'Поле не должен быть короче 4-ох символов';
-            }
-
-            if ($errors == false) {
-                $model->saveOrders($user_id, $name, $phone, $comment, $products_cart);
+        if (Request::isPost()) {
+            $model->load($data);
+            if ($model->validate($data)) {
+                if (empty($products_cart)) {
+                    Request::redirect('/');
+                }
+                $model->saveOrders($data, $user_id, $products_cart);
                 Cart::clear();
-                header("location: /cart");
+                $_SESSION['success'] = 'Вы успешно оформили заказ!';
+            } else {
+                $model->getErrors();
             }
-            $this->set(compact('phone', 'comment', 'errors'));
         }
 
         $this->set([
             'name_user' => $name_user,
-            'Error' => $errors,
             'total_products_price' => $total_products_price,
         ]);
     }

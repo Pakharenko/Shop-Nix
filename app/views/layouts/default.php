@@ -5,7 +5,7 @@
 <?php $crumbs->subscribe(); ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Nix shop</title>
@@ -31,7 +31,7 @@
                     <?php if ($auth->auth()) : ?>
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <a href="/cabinet">Личный кабинет </a>,
-                        <span class="text-success"><?= $auth->auth(); ?></span>
+                        <span class="text-success"><?= $auth->auth('name'); ?></span>
                         <a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a>
                     <?php else : ?>
                         <i class="fa fa-lock" aria-hidden="true"></i>
@@ -72,8 +72,8 @@
                 </form>
 
                 <div class="header-block-cart">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"><span
-                                id="cart-count"><?= $cart::totalProductsCart(); ?></span></i>
+                    <i class="fa fa-shopping-cart" aria-hidden="true">
+                        <span id="cart-count"><?= $cart::totalProductsCart(); ?></span></i>
                     <a href="/cart"> Корзина </a>
                     <span> <?= $cart::getTotalPriceInHeader(); ?> grn. </span>
                 </div>
@@ -88,12 +88,18 @@
     <nav aria-label="breadcrumb col">
         <ol class="breadcrumb d-flex justify-content-center">
 
-            <?php foreach ($crumbs::crumbs() as $crumb) : ?>
-                <?php if ($crumb == '') : ?>
-                    <li>Главная страница</li>
-                <?php endif; ?>
-                <li class="breadcrumb-item"><?= $crumb; ?></li>
-            <?php endforeach; ?>
+                <?php foreach ($crumbs::crumbs() as $item) : ?>
+                    <?php if (isset($item)) : ?>
+                        <li>
+                            <?php if (!empty($item['url'])) : ?>
+                                <a href="<?php echo $item['url'] ?>"><?php echo $item['text'] ?></a>
+                            <?php  else : ?>
+                                <?php echo $item['text'] ?>
+                            <?php endif; ?>
+                        </li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+
         </ol>
     </nav>
 </div>
@@ -110,10 +116,9 @@
                         <a class="text-danger" href="/catalog">Все товары...</a>
                         <div class="sidebar-nav">
 
-
                             <ul>
 
-                                <? foreach ($cat->run() as $category) : ?>
+                                <?php foreach ($cat->run() as $category) : ?>
                                     <li>
 
                                         <?php if (count($category['child']) > 0) : ?>
@@ -324,8 +329,9 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
@@ -335,21 +341,7 @@
         crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/793381aa2c.js"></script>
 <script src="/public/js/owl.carousel.min.js"></script>
-
-<script>
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        margin: 10,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-            }
-        }
-    })
-</script>
+<script src="/public/js/main.js"></script>
 
 </body>
 </html>

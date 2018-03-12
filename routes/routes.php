@@ -8,6 +8,8 @@ Router::add('^catalog/page-(?P<alias>[0-9]+)$', ['controller' => 'Catalog', 'act
 Router::add('^catalog/(?P<alias>[0-9]+)$', ['controller' => 'Catalog', 'action' => 'category']);
 Router::add('^product/(?P<alias>[0-9]+)$', ['controller' => 'Product', 'action' => 'index']);
 Router::add('^cart/(?P<action>[a-z-]+)/(?P<alias>[0-9]+)$', ['controller' => 'Cart', 'action' => 'index']);
+Router::add('^cart/(?P<action>[a-z-]+)/(?P<alias>[0-9]+)$', ['controller' => 'Cart', 'action' => 'add']);
+Router::add('^cart/(?P<action>[a-z-]+)/(?P<alias>[0-9]+)$', ['controller' => 'Cart', 'action' => 'ajax']);
 Router::add('^post/view/(?P<alias>[0-9]+)$', ['controller' => 'Post', 'action' => 'view']);
 
 

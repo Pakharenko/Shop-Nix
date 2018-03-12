@@ -19,7 +19,7 @@
                             Цена: <?= $product['price']; ?> grn.
                         </div>
                         <div class="product-to-cart">
-                            <a href="/cart/add/<?= $product['id']; ?>">В корзину</a>
+                            <a class="add-to-cart" data-id="<?= $product['id']; ?>" href="/cart/add/<?= $product['id']; ?>">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                                 Цена: <?= $product['price']; ?> grn.
                             </div>
                             <div class="product-to-cart">
-                                <a href="/cart/add/<?= $product['id']; ?>">В корзину</a>
+                                <a class="add-to-cart" data-id="<?= $product['id']; ?>" href="/cart/add/<?= $product['id']; ?>">В корзину</a>
                             </div>
                         </div>
                     </div>

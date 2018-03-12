@@ -8,12 +8,6 @@
     </p>
 <h5 class="text-dark">Заполните Ваши данные для оформления заказа</h5>
 
-    <?php if (isset($errors) && is_array($errors)) : ?>
-        <?php foreach ($errors as $error) : ?>
-            <p class="text-danger"> - <?php echo $error; ?></p>
-        <?php endforeach; ?>
-    <?php endif; ?>
-
         <form method="post" action="">
             <div class="form-group">
                 <label for="exampleInputName">Ваше имя:</label>

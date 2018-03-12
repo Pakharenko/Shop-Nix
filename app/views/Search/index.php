@@ -1,6 +1,5 @@
 <h1>Результаты поиска</h1>
 
-
 <?php if (!empty($search)) : ?>
 <div class="container">
     <div class="row">
@@ -30,5 +29,5 @@
     </div>
 </div>
 <?php else : ?>
-<h3 class="text-danger">Товар не найден!</h3>
+    <h3 class="text-danger">Товар "<b class="text-success"><?= $search_text; ?></b>" не найден!</h3>
 <?php endif; ?>

@@ -18,6 +18,7 @@ class Router
     // текущий маршрут приложения
     public static function getRoute()
     {
+        var_dump($route);
         return self::$route;
     }
     // ищет совпадение маршрутов если true записываем в текущий маршрут
@@ -52,7 +53,6 @@ class Router
     // перенаправляет URL по корректному маршруту. $url - входящий URL
     public static function dispatch($url)
     {
-        new ErrorHandler();
         $url = self::removeQueryString($url);
         if (self::matchRoute($url)) {
             $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
@@ -69,7 +69,7 @@ class Router
             } else {
                 throw new \Exception("Контроллер <b>$controller</b> не найден", 404);
             }
-        } else {
+        } else{
             throw new \Exception("Страница не найдена", 404);
         }
     }

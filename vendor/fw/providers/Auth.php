@@ -28,17 +28,16 @@ class Auth
                 $auth_admin = $user['is_admin'];
             }
         }
-
         return intval($auth_admin);
     }
 
     public static function getNameUser()
     {
         $name = false;
-            foreach (User::isAuth() as $nameUser) {
-                $name = $nameUser['name'];
-            }
-            return $name;
+        foreach (User::isAuth() as $nameUser) {
+            $name = $nameUser['name'];
+        }
+        return $name;
     }
 
     public static function getAllUserData()
