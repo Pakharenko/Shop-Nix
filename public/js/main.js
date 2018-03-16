@@ -11,11 +11,26 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
+
 $(document).ready(function(){
     $(".add-to-cart").click(function () {
         var id = $(this).attr("data-id");
-        $.post("/cart/ajax/"+id, {}, function (data) {
+        $.post("/cart/ajax/"+id, {}, function (response) {
+            var data = JSON.parse(response);
+            $('#cart-count').html(data.total_count);
+            $('#total-price').html(data.total_price);
         });
+        return false;
+    });
+});
+
+
+$(document).ready(function(){
+    $(".delete").click(function () {
+        var id = $(this).attr("data-id");
+        $.post("/cart/delete/"+id, {}, function () {
+           $("#product-"+id).remove();
+       });
         return false;
     });
 });

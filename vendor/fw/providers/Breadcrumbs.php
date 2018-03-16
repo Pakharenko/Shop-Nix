@@ -59,7 +59,7 @@ class Breadcrumbs
                         break;
                     case 'catalog/filter' : $crumbs[$key]['text'] = 'Фильтры товаров';
                         break;
-                    case 'catalog/' : $crumbs[$key]['text'] = 'Каталог';
+                    case 'search' : $crumbs[$key]['text'] = 'Результаты поиска';
                         break;
                 }
             }

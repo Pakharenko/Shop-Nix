@@ -75,7 +75,7 @@
                     <i class="fa fa-shopping-cart" aria-hidden="true">
                         <span id="cart-count"><?= $cart::totalProductsCart(); ?></span></i>
                     <a href="/cart"> Корзина </a>
-                    <span> <?= $cart::getTotalPriceInHeader(); ?> grn. </span>
+                    <span id="total-price"> <?= $cart::getTotalPriceInHeader(); ?> </span>grn.
                 </div>
 
             </div>

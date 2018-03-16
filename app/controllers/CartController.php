@@ -35,14 +35,17 @@ class CartController extends AppController
 
     public function ajaxAction()
     {
-        echo Cart::addProduct($this->route['alias']);
-        return true;
+        $response = [];
+        $response['total_count'] = Cart::addProduct($this->route['alias']);
+        $response['total_price'] = Cart::getTotalPriceInHeader();
+        echo json_encode($response);
+        die();
     }
 
     public function deleteAction()
     {
         Cart::deleteProduct($this->route['alias']);
-        header("Location: /cart");
+        Request::redirect('/cart');
     }
 
     public function ordersAction()

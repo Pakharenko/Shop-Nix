@@ -10,6 +10,7 @@ Router::add('^product/(?P<alias>[0-9]+)$', ['controller' => 'Product', 'action' 
 Router::add('^cart/(?P<action>[a-z-]+)/(?P<alias>[0-9]+)$', ['controller' => 'Cart', 'action' => 'index']);
 Router::add('^cart/(?P<action>[a-z-]+)/(?P<alias>[0-9]+)$', ['controller' => 'Cart', 'action' => 'add']);
 Router::add('^cart/(?P<action>[a-z-]+)/(?P<alias>[0-9]+)$', ['controller' => 'Cart', 'action' => 'ajax']);
+Router::add('^cart/(?P<action>[a-z-]+)/(?P<alias>[0-9]+)$', ['controller' => 'Cart', 'action' => 'delete']);
 Router::add('^post/view/(?P<alias>[0-9]+)$', ['controller' => 'Post', 'action' => 'view']);
 
 
